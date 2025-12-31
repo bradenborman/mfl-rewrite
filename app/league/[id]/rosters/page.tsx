@@ -214,7 +214,10 @@ export default function AllRostersPage() {
       <header style={{
         backgroundColor: 'white',
         borderBottom: '1px solid #e2e8f0',
-        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)'
+        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
+        position: 'sticky',
+        top: 0,
+        zIndex: 1000
       }}>
         <div className="container" style={{paddingTop: '12px', paddingBottom: '12px'}}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>

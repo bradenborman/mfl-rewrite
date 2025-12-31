@@ -356,7 +356,39 @@ export default function LeagueDashboard() {
             })
             
             console.log('Processed standings:', processedStandings)
-            setStandings(processedStandings)
+            
+            console.log('=== STANDINGS DEBUG ===')
+            console.log('Raw standings franchises:', franchises)
+            console.log('League data franchises:', leagueData?.league?.franchises?.franchise)
+            console.log('Processed standings before team name update:', processedStandings)
+            
+            // Update standings with real team names immediately
+            console.log('=== UPDATING STANDINGS WITH TEAM NAMES ===')
+            const leagueFranchises = Array.isArray(leagueData.league.franchises.franchise) 
+              ? leagueData.league.franchises.franchise 
+              : [leagueData.league.franchises.franchise]
+            
+            console.log('Available league franchises:', leagueFranchises.map((f: any) => ({ id: f.id, name: f.name })))
+            
+            const standingsWithNames = processedStandings.map((team: any) => {
+              let teamName = team.team // keep existing name as fallback
+              console.log(`Processing team ${team.franchiseId}, current name: ${teamName}`)
+              
+              const franchiseInfo = leagueFranchises.find((f: any) => f.id === team.franchiseId)
+              console.log(`Found franchise info for ${team.franchiseId}:`, franchiseInfo)
+              
+              if (franchiseInfo?.name) {
+                teamName = franchiseInfo.name
+                console.log(`Updated team name to: ${teamName}`)
+              } else {
+                console.log(`No name found for franchise ${team.franchiseId}`)
+              }
+              
+              return { ...team, team: teamName }
+            })
+            
+            console.log('Final standings with team names:', standingsWithNames)
+            setStandings(standingsWithNames)
             
             // Find the current user's franchise in standings
             const userStandings = franchises.find((f: any) => f.id === franchiseId)
@@ -394,26 +426,6 @@ export default function LeagueDashboard() {
 
       setLeagueInfo(leagueInfo)
       setStats(stats)
-      
-      // Update standings with real team names if we have standings data
-      if (standings.length > 0) {
-        const updatedStandings = standings.map(team => {
-          let teamName = team.team // keep existing name as fallback
-          if (leagueData?.league?.franchises?.franchise) {
-            const leagueFranchises = Array.isArray(leagueData.league.franchises.franchise) 
-              ? leagueData.league.franchises.franchise 
-              : [leagueData.league.franchises.franchise]
-            
-            const franchiseInfo = leagueFranchises.find((f: any) => f.id === team.franchiseId)
-            if (franchiseInfo?.name) {
-              teamName = franchiseInfo.name
-            }
-          }
-          return { ...team, team: teamName }
-        })
-        console.log('Updated standings with team names:', updatedStandings)
-        setStandings(updatedStandings)
-      }
       
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to load league information'
@@ -504,7 +516,10 @@ export default function LeagueDashboard() {
       <header style={{
         backgroundColor: 'white',
         borderBottom: '1px solid #e2e8f0',
-        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)'
+        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
+        position: 'sticky',
+        top: 0,
+        zIndex: 1000
       }}>
         <div className="container" style={{paddingTop: '12px', paddingBottom: '12px'}}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
@@ -1118,7 +1133,6 @@ export default function LeagueDashboard() {
               </div>
             </div>
           </div>
-        ) : null}
       </main>
     </div>
   );
