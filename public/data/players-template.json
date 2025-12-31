@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "lastUpdated": 0,
+    "version": "1.0.0",
+    "source": "MFL API - players endpoint"
+  },
+  "data": [
+    {
+      "id": "0000",
+      "name": "Template Player",
+      "position": "QB",
+      "team": "FA",
+      "status": "active",
+      "height": "6-2",
+      "weight": "220",
+      "age": 25,
+      "experience": 3,
+      "jersey": "12"
+    }
+  ]
+}

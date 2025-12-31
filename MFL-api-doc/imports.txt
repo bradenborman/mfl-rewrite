@@ -1,0 +1,202 @@
+Import Requests
+Request Type	Description	Arguments
+Common League Info
+lineup	Import a franchise's starting lineup. Test it!
+Access restricted to league owners.
+Commissioner can impersonate owner using FRANCHISE_ID paramter.	
+L	League Id(required)
+W	The week you are setting the lineup for (required).
+STARTERS	A comma-separated list of players to use as the starters (required).
+COMMENTS	A short message to be save as the comments for this starting lineup (optional).
+TIEBREAKERS	For leagues that use tiebreaker player(s), specify them via this field.
+BACKUPS	For leagues that use backup player(s), specify them via this field. Note that this feature is no longer supported.
+FRANCHISE_ID	When called by the Commissioner, you must pass this parameter to indicate on which franchise behalf to do the request.
+franchises	Loads franchise names, graphics, contact information, and more. Test it!
+Access Restricted: Requires cookie from league commissioner.	
+L	League Id(required)
+DATA	XML string representing the franchises' data. Data format is the same as the contents of <franchises> element in the export league API. See Import Data details.
+OVERLAY	If this parameter is set, the passed in data will overlay the existing data. Fields not uploaded will be left as is. If this parameter is not set, all the data not passed in will be erased.
+calendarEvent	Import an event to a league calendar. Test it!
+Access Restricted: Requires cookie from league commissioner.	
+L	League Id(required)
+EVENT_TYPE	The id of the event type being added to the calendar. The more commont event types are "DRAFT_START", "AUCTION_START", "TRADE" (for trade deadline), "WAIVER_REVERSE", "WAIVER_BBID", "WAIVER_UNLOCK", "WAIVER_LOCK", and "CUSTOM" (required).
+START_TIME	The Unix time of when the event starts (required).
+END_TIME	The Unix time of when the event ends (optional).
+HAPPENS	If specified, the event is added at the same time each week for the following this many weeks.
+Transactions
+fcfsWaiver	Import an add/drop move that will be executed immediately (also known as a first-come, first-serve move). You may also use this call to drop multiple players at once. At least one player to be added or dropped is required. Test it!
+Access restricted to league owners.
+Commissioner can impersonate owner using FRANCHISE_ID paramter.	
+L	League Id(required)
+ADD	The player id to add.
+DROP	A comma-separated list of player ids to drop.
+FRANCHISE_ID	When called by the Commissioner, you must pass this parameter to indicate on which franchise behalf to do the request.
+waiverRequest	Import one round's worth of waiver requests. Test it!
+Access restricted to league owners.
+Commissioner can impersonate owner using FRANCHISE_ID paramter.	
+L	League Id(required)
+ROUND	Specifies the waiver round this request is for (required).
+PICKS	A comma delimited list of player waiver claims. Each claim is two player ids separated by an underscore. The first player id is the player to ask for and the second is the one to drop if the waiver claim is awarded. For example, the value "1111_2222,3333_4444" means that the first priority is to acquired player id 1111 dropping 2222, but if that's not possible, add 3333 and drop 4444 (required). In order to clear the whole round, pass an empty value for PICKS.
+REPLACE	If there are already picks for that round, the ones specified via the PICKS parameter are added to the existing request unless this parameter is set in which case it replaces the current entries.
+FRANCHISE_ID	When called by the Commissioner, you must pass this parameter to indicate on which franchise behalf to do the request.
+blindBidWaiverRequest	Import blind bidding waiver requests. Test it!
+Access restricted to league owners.
+Commissioner can impersonate owner using FRANCHISE_ID paramter.	
+L	League Id(required)
+ROUND	Specifies the waiver round this request is for (required only if the league uses conditional blind bidding).
+PICKS	A comma delimited list of bids. Each bid consists of the player id to bid on, the bid amount and the player to drop if the claim is awarded, separated by underscores. For example, the value "1111_5_2222,3333_2_4444" means that the first priority is to acquired player id 1111 for $5, dropping 2222, but if that's not possible, add 3333 for $2 and drop 4444 (required). Specify "0000" as the player id when not dropping a player. In order to clear the whole round, pass an empty value for PICKS.
+REPLACE	If there are already picks for that round, the ones specified via the PICKS parameter are added to the existing request unless this parameter is set in which case it replaces the current entries.
+FRANCHISE_ID	When called by the Commissioner, you must pass this parameter to indicate on which franchise behalf to do the request.
+ir	Import an IR (activate/deactivate) move. Test it!
+Access restricted to league owners.
+Commissioner can impersonate owner using FRANCHISE_ID paramter.	
+L	League Id(required)
+ACTIVATE	Comma-separated list of player ids to activate (move from Injured Reserve to Active Roster).
+DEACTIVATE	Comma-separated list of player ids to deactivate (move from Active Roster to Injured Reserve).
+DROP	Comma-separated list of player ids to drop from the roster. This applies to all players on the roster, regardeless of roster status.
+FRANCHISE_ID	When called by the Commissioner, you must pass this parameter to indicate on which franchise behalf to do the request.
+taxi_squad	Import a Taxi Squad (promote/demote) move. Test it!
+Access restricted to league owners.
+Commissioner can impersonate owner using FRANCHISE_ID paramter.	
+L	League Id(required)
+PROMOTE	Comma-separated list of player ids to promote (move from Taxi Squad to Active Roster).
+DEMOTE	Comma-separated list of player ids to demote (move from Active Roster to Taxi Squad).
+DROP	Comma-separated list of player ids to drop from the roster. This applies to all players on the roster, regardeless of roster status.
+FRANCHISE_ID	When called by the Commissioner, you must pass this parameter to indicate on which franchise behalf to do the request.
+tradeProposal	Propose a trade to another franchise. The WILL_GIVE_UP and WILL_RECEIVE parameters can also contain draft picks if the league allows draft pick trading. Current year draft picks are specified like DP_02_05 which refers to the 3rd round 6th pick (the round and pick values in the string are one less than the actual round/pick). For future years picks, they are identified like FP_0005_2018_2 where 0005 referes to the franchise id who originally owns the draft pick, then the year and then the round (in this case the rounds are the actual rounds, not one less). If the league uses Blind Bidding and allows trading of blind bid dollars, you can specify like BB_10.50, which means $10.50 worth of blind bid dollars. Test it!
+Access restricted to league owners.
+Commissioner can impersonate owner using FRANCHISE_ID paramter.	
+L	League Id(required)
+OFFEREDTO	Target franchise id of the trade proposal (required).
+WILL_GIVE_UP	Comma-separated list of player ids or other assets (see description) being offered (required).
+WILL_RECEIVE	Comma-separated list of player ids or other assets (see description) being asked for (required).
+COMMENTS	Short message to send to the target of the trade proposal (optional).
+EXPIRES	Unix time specifying when the trade proposal expires (default is one week from when offered).
+FRANCHISE_ID	When called by the Commissioner, you must pass this parameter to indicate on which franchise behalf to do the request.
+tradeResponse	Respond to an existing trade offer. See the tradeProposal request above for info regarding draft pick trading. Test it!
+Access restricted to league owners.
+Commissioner can impersonate owner using FRANCHISE_ID paramter.	
+L	League Id(required)
+TRADE_ID	Trade id as returned by the pending Trades export API (required).
+RESPONSE	Whether the trade proposal is accepted or rejected. Valid values are 'accept', 'reject' or 'revoke' (required). The 'revoke' response is only allowed if the request is made by the originator of the trade proposal. The other two options are allowed only if the request is made by the target of the trade proposal.
+COMMENTS	Short message to send to the originator of the trade proposal when the trade is rejected (optional).
+FRANCHISE_ID	When called by the Commissioner, you must pass this parameter to indicate on which franchise behalf to do the request.
+tradeBait	Import an owner's trade bait, which will overwrite his previously entered trade bait. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+WILL_GIVE_UP	Comma-separated list of player ids being offered (required). Draft picks are also allowed assuming the league supports draft pick trading (see tradeProposal request for details on how to format them).
+IN_EXCHANGE_FOR	A description of what the team is interested in getting back in a trade. This can be a string of no more than 256 characters. Spaces and all other special characters should be properly escaped.
+Draft & Auction
+draftResults	Loads draft order and actual draft results. All previously existing draft results will be completely deleted from the system when importing draft results. Note that this is meant to be used to load the results of an offline draft all at once, not to implement a live draft application. An additional attribute called 'status' is supported on each draft pick element, allowing you to indicate the status of the player upon import. The valid values are: ROSTER, TAXI_SQUAD, or INJURED_RESERVE. If no status is indicated, it defaults to ROSTER. Test it!
+Access Restricted: Requires cookie from league commissioner.	
+L	League Id(required)
+DATA	XML string representing the draft results data. See Import Data details.
+auctionResults	Auction results. This is meant to be used to load the results of an offline draft all at once, not to implement a live draft application. An additional attribute called 'status' is supported on each auction element, allowing you to indicate the status of the player upon import. Valid values are: ROSTER, TAXI_SQUAD, or INJURED_RESERVE. If no status is indicated, it defaults to ROSTER. Test it!
+Access Restricted: Requires cookie from league commissioner.	
+L	League Id(required)
+DATA	XML string representing the auction results data. See Import Data details.
+CLEAR	If set to 1, it will clear out any current auction results. This is a cosmetic info only, that affects what's displayed in the Action Results report but leaves the current rosters as they area.
+OVERWRITE	If set to 1, it will overwrite the current rosters with the new ones. The default is to append the new players to existing rosters. Note that if set it may result in multiple copies of the same player. Note that setting OVERWRITE=1 without setting CLEAR=1 may result in an inconsistent state regarding available funds.
+myDraftList	Set the players in an owner's My Draft List. This will completely overwrite an owners previous My Draft List. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+PLAYERS	Comma-separated list of player IDs to set the list to (required).
+Communications
+messageBoard	Start a message board thread or reply to an existing message board thread. Test it!
+Access restricted to league owners.
+Commissioner can impersonate owner using FRANCHISE_ID paramter.	
+L	League Id(required)
+FRANCHISE_ID	The franchise id posting this message. Only valid when the request comes from the league commissioner. Use "0000" as the value to indicate the posting should be from the Commissioner, not an owner.
+THREAD	Message board thread id. If set it assumes the post is a reply to this thread.
+SUBJECT	When starting a new thread (i.e. ehe THREAD parameter is not specified), this parameter specifies the subject of the thread.
+BODY	The body of the message (required).
+pollVote	Import a vote in a league poll. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+POLL_ID	The poll id that the vote is for (required).
+ANSWER_ID	The id of the selected poll choice (required). If the poll allows multiple answers, separate them with commas.
+emailMessage	Send an email message to one or all the owners in the league. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+SEND_TO	If specified, send the message just to this franchise. Leave this parameter out if you want the email to go to all league owners.
+SUBJECT	Specifies the subject of the email message (required).
+BODY	Specifies the body of the email message (required).
+INVITE	If set, this causes the franchise-specific league invite link to be included in each email message body.
+add_device_token	Registers a device token for the given user. Used to send notifications via a mobile app. Accessed restricted to logged in users. Test it!	
+TOKEN	The device token to add.
+NAME	The name for this device, must be less than 36 characters.
+DELETE	If set to ALL, it clears out all the tokens for this user, otherwise it deletes the token with the given name.
+League Players
+salaries	XML string representing the player salaries. The format for this data is
+<salaries>
+<leagueUnit unit="LEAGUE">
+<player id="9823" salary="11" contractStatus="A" contractYear="1"
+        contractInfo="info" />
+<player id="8670" salary="7.56" contractYear="2" contractInfo="more info" />
+...
+</leagueUnit>
+</salaries>
+The valid attributes in the player elements depend on the league salary settings. If a setting is turned off in the Salary Cap Setup page, it will not be imported. Test it!
+Access Restricted: Requires cookie from league commissioner.	
+L	League Id(required)
+DATA	XML string representing the league salaries data. See Import Data details.
+APPEND	If this parameter is set to any non-zero value, the passed in data will overlay the existing data. Salaries not uploaded will be left as is. If this parameter is not set, the salaries not passed in will be erased..
+salaryAdj	XML string representing the salary adjustments. The format for this data is
+<salary_adjustments>
+<salary_adjustment franchise_id="0001" amount="5.75"
+                   explanation="$5.75 fine for being late to draft."/>
+<salary_adjustment franchise_id="0007" amount="-3.00" 
+                   explanation="$3 credit for some reason."/>
+...
+</salary_adjustments>
+For all adjustments, the franchise_id, amount and explanation fields are required and must not be empty. Use a negative amount to credit the franchise (i.e. reduce their salary). The data will always be added to the existing salary adjustments. Test it!
+Access Restricted: Requires cookie from league commissioner.	
+L	League Id(required)
+DATA	XML string representing the salary adjustments to be made. See Import Data details.
+playerScoreAdjustment	Import one player score adjustment record. Test it!
+Access Restricted: Requires cookie from league commissioner.	
+L	League Id(required)
+PLAYER	The player id whose score is being adjusted (required).
+WEEK	The week number of the score being adjusted (required).
+POINTS	The point adjustment (required).
+EXPLANATION	A short message describing the reason for the adjustment (required).
+keepers	Import an owner's keeper selections. Test it!
+Access restricted to league owners.
+Commissioner can impersonate owner using FRANCHISE_ID paramter.	
+L	League Id(required)
+KEEP	Comma-separated list of player IDs to keep. Players not listed here and previously marked as kept will be removed from the players to keep. Passing an empty list will result in all keepers being unselected.
+FRANCHISE_ID	The franchise to which this keepers list applies. Only valid when the request comes from the league commissioner.
+myWatchList	Update the players in an owner's My Watch List. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+ADD	Comma-separated list of player IDs to add to the list.
+REMOVE	Comma-separated list of player IDs to remove from the list.
+Other League Info
+accounting	Import one accounting record. Test it!
+Access Restricted: Requires cookie from league commissioner.	
+L	League Id(required)
+FRANCHISE	The franchise id of the new record (required).
+AMOUNT	The amount being credited or debited. Positive values will increase the franchise's balance, while negative values will subtract from it (required).
+DESCRIPTION	A short message describing the transaction (required).
+franchiseScoreAdjustment	Import one franchise score adjustment record. Test it!
+Access Restricted: Requires cookie from league commissioner.	
+L	League Id(required)
+FRANCHISE	The franchise id whose score is being adjusted (required).
+WEEK	The week number of the score being adjusted (required).
+POINTS	The point adjustment (required).
+EXPLANATION	A short message describing the reason for the adjustment (required).
+poolPicks	Make an NFL or Fantasy pool pick. To send the actual picks you need to pass a number of PICK and RANK parameters. These have names like PICKDAL,NYG and RANKDAL,NYG. For example, in a game where the Cowboys are playing at the Giants, and you want to indicate with a confidence level of 16 that the Giants will win, the two name/value pairs that must be passed in are PICKDAL,NYG=NYG and RANKDAL,NYG=16. This needs to be repeated for all matchups (fantasy or NFL) for the week in question. For fantasy pool picks, the franchise ids are used instead of NFL team abbreviations.
+Access restricted to league owners.
+Commissioner can impersonate owner using FRANCHISE_ID paramter.	
+L	League Id(required)
+POOLTYPE	Pool type of picks being imported. Must be either "NFL" or "Fantasy". If not specified, the default is "NFL".
+PICK	See description (required).
+RANK	See description (required).
+WEEK	The week being submitted (only for the commissioner).
+FRANCHISE_ID	When called by the Commissioner, you must pass this parameter to indicate on which franchise behalf to do the request.
+survivorPoolPick	Import a survivor pool pick. Test it!
+Access restricted to league owners.
+Commissioner can impersonate owner using FRANCHISE_ID paramter.	
+L	League Id(required)
+PICK	Survivor pick, the MyFantasyLeague.com 3-letter NFL abbreviation (required).
+FRANCHISE_ID	When called by the Commissioner, you must pass this parameter to indicate on which franchise behalf to do the request.

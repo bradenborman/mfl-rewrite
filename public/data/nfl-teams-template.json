@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "lastUpdated": 0,
+    "version": "1.0.0",
+    "source": "MFL API - derived from schedule data"
+  },
+  "data": [
+    {
+      "id": "KC",
+      "name": "Kansas City Chiefs",
+      "abbreviation": "KC",
+      "conference": "AFC",
+      "division": "West"
+    },
+    {
+      "id": "BUF",
+      "name": "Buffalo Bills",
+      "abbreviation": "BUF",
+      "conference": "AFC",
+      "division": "East"
+    }
+  ]
+}

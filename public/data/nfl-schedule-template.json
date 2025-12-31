@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "lastUpdated": 0,
+    "version": "1.0.0",
+    "source": "MFL API - nflSchedule endpoint"
+  },
+  "data": [
+    {
+      "id": "template_game",
+      "week": 1,
+      "homeTeam": "KC",
+      "awayTeam": "BUF",
+      "kickoff": 1704067200,
+      "homeScore": null,
+      "awayScore": null,
+      "gameStatus": "not_started"
+    }
+  ]
+}

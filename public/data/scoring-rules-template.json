@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "lastUpdated": 0,
+    "version": "1.0.0",
+    "source": "MFL API - allRules endpoint"
+  },
+  "data": [
+    {
+      "id": "pass_yd",
+      "abbreviation": "PY",
+      "description": "Passing Yards",
+      "points": 0.04,
+      "isPlayerRule": true,
+      "isTeamRule": false,
+      "isCoachRule": false
+    },
+    {
+      "id": "pass_td",
+      "abbreviation": "PTD",
+      "description": "Passing Touchdowns",
+      "points": 4,
+      "isPlayerRule": true,
+      "isTeamRule": false,
+      "isCoachRule": false
+    },
+    {
+      "id": "rush_yd",
+      "abbreviation": "RY",
+      "description": "Rushing Yards",
+      "points": 0.1,
+      "isPlayerRule": true,
+      "isTeamRule": false,
+      "isCoachRule": false
+    }
+  ]
+}

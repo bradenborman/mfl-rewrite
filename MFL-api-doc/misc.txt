@@ -1,0 +1,27 @@
+Draft & Auction
+live_draft	Attempts to draft the specified player or otherwise control the draft timer. When making a pick, the round and pick parameters (and the franchise id if required) must match the current "On The Clock" info. They can not be used to change earlier or later picks. For more info, check this FAQ. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+CMD	This needs to be set to "DRAFT" to make a draft pick. It may also be set to "PAUSE" or "RESUME" which pauses or resumes the draft or "SKIP" or "UNDO" which skips the current pick or undoes the last pick. All commands other than "DRAFT" are available to the commissioner only.
+PLAYER_PICK	The player id of the player to draft (required for CMD=DRAFT).
+FRANCHISE_PICK	When making a draft pick, it will use the franchise id of the user submitting the request. If the request is sent by the commissioner, then this parameter is required to specify the franchise id making the pick.
+ROUND	The draft round number for the draft pick (required for CMD=DRAFT).
+PICK	The pick number within the current round for the draft pick (required for CMD=DRAFT)
+COMMENTS	Optional comments to be included with the pick. Meant for email drafts but accepted for live drafts too. Comments will not be shown in real time on the live draft room.
+JSON	If set to 1, the result is returned in JSON format.
+XML	If set to 1, the result is returned in XML format.
+Communications
+chat_save	Posts a message to the league chat. Note that there's no API to get the chat messages. Those are available via the XML file located at http://HOST.myfantasyleague.com/fflnetdynamicYEAR/LEAGUE_ID_chat.xml. You must replace HOST, YEAR and LEAGUE_ID with the proper values. This file might not exist if no chat messages have been written to your league, so your client needs to handle a 404 (page not found) response. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+MESSAGE	A URL-encoded string that will be posted to the league chat. (Spaces are represented by + signs, all other non-alphanumeric characters should be encoded as %. (required)
+TO_FID	Optional argument that if specified makes the message only visible to the given franchise id.
+User Functions
+login	Validates a set of user credentials (username/password) and if valid, returns the cookie for that user. Note that this request should be sent via HTTPS and using the POST method to avoid exposing the user credentials on insecure networks. Support for this API via GET may be discontinued at any point. More info is available here. Test it!	
+USERNAME	The login username (required).
+PASSWORD	The login password (required).
+XML	This needs to be set to 1 to avoid returning a full HTML page (required).
+NFL Content
+mfl_status	Returns the current week and other related variables. Use this in order to tell what is the current week. To access this use https://api.myfantasyleague.com/fflnetdynamic2025/mfl_status.xml. A JSON option is also available (use .json instead of .xml.)	 
+nfl_sched	Returns the full NFL schedule. Data for in-progress games updates every 15 minutes. To access this use: https://api.myfantasyleague.com/fflnetdynamic2025/nfl_sched.xml. A JSON option is also available (use .json instead of .xml.)	 
+nfl_sched_X	Returns the NFL schedule for week X. Data for in-progress games updates every 15 minutes. To access this for week 1 use: https://api.myfantasyleague.com/fflnetdynamic2025/nfl_sched_1.xml. Replace the '1' with a different week number to get the appropriate week schedule. A JSON option is also available (use .json instead of .xml.)	 

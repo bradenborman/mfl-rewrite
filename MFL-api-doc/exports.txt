@@ -1,0 +1,225 @@
+Common League Info
+league	General league setup parameters for a given league, including: league name, roster size, IR/TS size, starting and ending week, starting lineup requirements, franchise names, division names, and more. If you pass the cookie of a user with commissioner access, it will return otherwise private owner information, like owner names, email addresses, etc. Test it!
+Personal user information, like name and email addresses only returned to league owners.	
+L	League Id(required)
+rules	League scoring rules for a given league. To understand the scoring rule abbreviations in this document, see the allRules document type above. Test it!	
+L	League Id(required)
+rosters	The current rosters for all franchises in a league, including player status (active roster, IR, TS), as well as all salary/contract information for that player. Test it!	
+L	League Id(required)
+FRANCHISE	When set, the response will include the current roster of just the specified franchise.
+W	If the week is specified, it returns the roster for that week. The week must be less than or equal to the upcoming week. Changes to salary and contract info is not tracked so those fields (if used) always show the current values.
+freeAgents	Fantasy free agents for a given league. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+POSITION	Return only players from this position.
+schedule	The fantasy schedule for a given league/week. Weeks in the past will show the score of each matchup. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+W	Week. If a week is specified, it returns the fantasy schedule for that week, otherwise the full schedule is returned.
+F	Franchise ID. If a franchise id is specified, the schedule for just that franchise is returned.
+calendar	Returns a summary of the league calendar events. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+playoffBrackets	All playoff brackets for a given league. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+playoffBracket	Returns the games (with results if available) of the specified playoff bracket. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+BRACKET_ID	The bracket id to return the info
+Transactions
+transactions	All non-pending transactions for a given league. Note that this can be a very large set, so it's recommended that you filter the result using one or more of the available parameters. If the request comes from an owner in the league, it will return the pending transactions for that owner's franchise. If it comes from the commissioner, it will return all pending transactions. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+W	If the week is specified, it returns the transactions for that week.
+TRANS_TYPE	Returns only transactions of the specified type. Types are: WAIVER, BBID_WAIVER, FREE_AGENT, WAIVER_REQUEST, BBID_WAIVER_REQUEST, TRADE, IR, TAXI, AUCTION_INIT, AUCTION_BID, AUCTION_WON, SURVIVOR_PICK, POOL_PICK. You may also specify a value of * to indicate all transaction types or DEFAULT for the default transaction type set. Or you can ask for multiple types by separating them with commas.
+FRANCHISE	When set, returns just the transactions for the specified franchise.
+DAYS	When set, returns just the transactions for the number of days specified by this parameter.
+COUNT	Restricts the results to just this many entries. Note than when this field is specified, only transactions from the most common types are returned.
+pendingWaivers	Pending waivers that the current franchise has submitted, but have not yet been processed. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+FRANCHISE_ID	When request comes from the league commissioner, this indicates which franchise they want.
+pendingTrades	Pending trades that the current franchise has offered to other franchises, or has been offered to by other franchises. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+FRANCHISE_ID	When request comes from the league commissioner, this indicates which franchise they want. Pass in '0000' to get trades pending commissioner action).
+tradeBait	The Trade Bait for all franchises in a league. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+INCLUDE_DRAFT_PICKS	When set, this will also return draft picks offered. Current year draft picks look like DP_02_05 which refers to the 3rd round 6th pick (the round and pick values in the string are one less than the actual round/pick). For future years picks, they are identified like FP_0005_2018_2 where 0005 referes to the franchise id who originally owns the draft pick, then the year and then the round (in this case the rounds are the actual rounds, not one less). This also includes Blind Bid dollars (in leagues that use them), which will be specified as BB_10 to indicate $10 in blind bid dollars.
+assets	All tradable assets (players, current year draft picks, future draft picks) for a given league. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+Scoring and Results
+leagueStandings	The current league standings for a given league. The fields returned for each franchise match the columns included in the league standings report. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+COLUMN_NAMES	When set to a non-zero value, returns a mapping of column keys to column names. This also shows the proper order of the standings columns.
+ALL	When set to a non-zero value, returns additional standings field values that are not part of the league standings report but are important for sorting league standings. Note that some of these extra fields may not be relevant for all leagues and may include duplicate info from the basic set.
+WEB	When set to a non-zero value, returns the columns shown on the web site only. This is in case the app wants to just replicate the report from the web site. This parameter is ignored if ALL is set.
+weeklyResults	The weekly results for a given league/week, including the scores for all starter and non-starter players for all franchises in a league. The "W" parameter can be "YTD" to give all year-to-date weekly results. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+W	If the week is specified, it returns the data for that week, otherwise the most current data is returned. If the value is 'YTD', then it returns year-to-date data (or the entire season when called on historical leagues).
+MISSING_AS_BYE	If set to 1, fantasy teams with no scheduled opponents will be shown as playing vs a BYE opponent.
+liveScoring	Live scoring for a given league and week, including each franchise's current score, how many game seconds remaining that franchise has, players who have yet to play, and players who are currently playing. Test it!	
+L	League Id(required)
+W	If the week is specified, it returns the data for that week, otherwise the most current data is returned.
+DETAILS	Setting this argument to 1 will return data for non-starters as well
+playerScores	All player scores for a given league/week, including all rostered players as well as all free agents. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+W	If the week is specified, it returns the data for that week, otherwise the current week data is returned. If the value is 'YTD', then it returns year-to-date data. If the value is 'AVG', then it returns a weekly average.
+YEAR	The year for the data to be returned.
+PLAYERS	Pass a list of player ids separated by commas (or just a single player id) to receive back just the info on those players.
+POSITION	Return only players from this position.
+STATUS	If set to 'freeagent', returns only players that are fantasy league free agents.
+RULES	If set, and a league id passed, it re-calculates the fantasy score for each player according to that league's rules. This is only valid when specifying the current year and current week.
+COUNT	Limit the result to this many players.
+projectedScores	Given a player ID, calculate the expected fantasy points, using that league's scoring system. The system will use the raw stats that fantasysharks.com projects. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+W	If the week is specified, it returns the projected scores for that week, otherwise the upcoming week is used.
+PLAYERS	Pass a list of player ids separated by commas (or just a single player id) to receive back just the info on those players.
+POSITION	Return only players from this position.
+STATUS	If set to 'freeagent', returns only players that are fantasy league free agents (note that this refers to players that current free agents, not that were free agents during the specified week).
+COUNT	Limit the result to this many players.
+Draft & Auction
+draftResults	Draft results for a given league. Note that this data may be up to 15 minutes delayed as it is meant to display draft results after a draft is completed. To access this data while drafts are in progress, check out this FAQ. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+auctionResults	Auction results for a given league. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+selectedKeepers	Currently selected keepers. Returns only own's franchise keepers. For commissioner returns all franchises unless Lockout is on. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+FRANCHISE	When set, returns just the keepers for the specified franchise (only for commissioner).
+myDraftList	My Draft List for the current franchise. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+Communications
+messageBoard	Display a summary of the recent message board posts to a league message board. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+COUNT	If specified, limit the number of threads to display to this value. Default is 10.
+messageBoardThread	Display posts in a thread from a league message board. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+THREAD	Thread id (required).
+polls	All current league polls with details as to which polls the current franchise voted on. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+device_tokens	Returns the device tokens for the current user. Test it!	 
+League Players
+playerRosterStatus	Get the player's current roster status. The franchise(s) the player is on are listed in the subelement. There may more than one of this for leagues that have multiple copies of players. Each of this elements will have a franchise id and status attribute. The status attribute can be one of: R (roster), S (starter), NS (non-starter), IR (injured reserve) or TS (taxi squad). The R value is only provided when there's no lineup submitted or the caller has no visibility into the lineup. If the player is a free agent, there will be a 'is_fa' attribute on the parent element. In those cases the elements 'cant_add' and 'locked' attributes may be set indicating whether a player can't be added or is locked. Test it!	
+L	League Id(required)
+P	Player id or list of player ids separated by commas (required).
+W	Week. If a week is specified, it returns the player status for that week. The default is the current Live Scoring week.
+F	Franchise it. If present it uses the franchise id to determine which conference or division to use for the purposes of identifying free agents. If not present it uses the user's franchise id. Only matters on deluxe leagues.
+myWatchList	My Watch List for the current franchise. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+contestPlayers	On Contest Leagues, this returns all players eligible to be in a franchise's starting lineup. While this request can be used by any league it's best suited for leagues with the loadRosters setting set to either 'contest' or 'setem'. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+W	Week. If a week is specified, it returns the players for that week. The default is the upcoming week.
+F	Franchise it. If present it returns the players eligible for that franchise. Only matters when called by the commissioner. When called by an owner, this parameter is ignored and the owner's franchise is used.
+salaries	The current player salaries and contract fields. Only players with values are returned. If a value is empty it means that the default value is in effect. The default values are specified under the player id '0000'. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+salaryAdjustments	All extra salary adjustments for a given league. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+Other League Info
+futureDraftPicks	Future draft picks for a given league. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+accounting	Returns a summary of the league accounting records. In the response, negative amounts are charges against the franchise while positive amounts is money paid by the franchise or owed to the franchise. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+pool	All NFL or fantasy pool picks for a given league. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+POOLTYPE	Which pool picks to return. Valid values are "NFL" (default) or "Fantasy".
+survivorPool	All survivor pool picks for a given league. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+abilities	Returns the abilities of the current franchise. A value of 0 means the franchise does not have the ability and a value of 1 means it has the ability. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+F	Franchise ID. When the request comes from the commissioner, this indicates which franchise's abilities to return. It's ignored if the request comes from an owner.
+DETAILS	If set to a non-zero/empty value, includes the abilities descriptions.
+appearance	The skin, home page tabs, and modules within each tab set up by the commissioner for a given league. Test it!	
+L	League Id(required)
+rss	An RSS feed of key league data for a given league, including: league standings, current week's live scoring, last week's fantasy results, and the five newest message board topics. Test it!
+Private league access restricted to league owners.	
+L	League Id(required)
+ics	Returns a summary of the league calendar in .ics format, which is suitable for importing into many modern calendaring programs, like Apple's Calendar, Google Calendar, Microsoft Outlook, and more. Test it!
+Access restricted to league owners.	
+L	League Id(required)
+User Functions
+myleagues	All of the leagues of the current user. Test it!
+Private league access restricted to league owners.
+Personal user information, like name and email addresses only returned to league owners.	
+YEAR	Returns the data for the specified year. Default is current year.
+FRANCHISE_NAMES	Set this argument to 1 to include the franchise names in the response. Note that when this parameter is set, and the user has a lot of leagues, this response may take a long time to process and time out.
+leagueSearch	Searches for leagues in our database that match either the given league id or whose name matches the specified string. Either the SEARCH or ID paramater must be specified, but not both. Test it!	
+SEARCH	Case-insensitive string to search for. Must be at least 3 characters long.
+ID	4 or 5-digit number to return the league with this id.
+YEAR	Year to search, default is the year in the URL.
+Fantasy Content
+players	All player IDs, names and positions that MyFantasyLeague.com has in our database for the current year. All other data types refer only to player IDs, so if you'd like to later present any data to people, you'll need this data type for translating player IDs to player names. Our player database is updated at most once per day, and it contains more than 2,000 players - in other words, you're strongly encouraged to read this data type no more than once per day, and store it locally as needed, to optimize your system performance. Test it!	
+L	League Id(optional)
+DETAILS	Set this value to 1 to return complete player details, including player IDs from other sources.
+SINCE	Pass a unix timestamp via this parameter to receive only changes to the player database since that time.
+PLAYERS	Pass a list of player ids separated by commas (or just a single player id) to receive back just the info on those players.
+playerProfile	Returns a summary of information regarding a player, including DOB, ADP ranking, height/weight. Test it!	
+P	Player id or list of player ids separated by commas (required).
+allRules	All scoring rules that MyFantasyLeague.com currently supports, including: if the rule is scored for players, teams or coaches, as well as an abbreviation of the scoring rule, a short description, and a detailed description. If you plan on using the 'rules' data type, you'll also need this data type to look up the abbreviations to translate them to their detailed description for people. Test it!	 
+playerRanks	This report provides overall player rankings from the experts at FantasySharks.com. These rankings can be used instead of Average Draft Position (ADP) rankings for guidance during your draft, or when generating your own draft list. Test it!	
+POS	Return only players at this position.
+SOURCE	Which player ranks source to use, default is 'sharks')
+adp	ADP results, including when the result were last updated, how many drafts the player was selected in, the average pick, minimum pick and maximum pick. Test it!	
+PERIOD	This returns draft data for just drafts that started after the specified period. Valid values are ALL, RECENT, DRAFT, JUNE, JULY, AUG1, AUG15, START, MID, PLAYOFF. This option is not valid for previous seasons.
+FCOUNT	This returns draft data from just leagues with this number of franchises. Valid values are 8, 10, 12, 14 or 16. If the value is 8, it returns data from leagues with 8 or less franchises. If the value is 16 it returns data from leagues with 16 or more franchises.
+IS_PPR	Filters the data returned as follows: If set to 0, data is from leagues that not use a PPR scoring system; if set to 1, only from PPR scoring system; if set to -1 (or not set), all leagues.
+IS_KEEPER	Pass a string with some combination of N, K and R: if N specified, returns data from redraft leagues, if 'K' is specified, returns data for keeper leagues and if 'R' is specified, return data from rookie-only drafts. You can combine these. If you specify 'KR' it will return rookie and keeper drafts only. Default is 'NKR'.
+IS_MOCK	If set to 1, returns data from mock draft leagues only. If set to 0, excludes data from mock draft leagues. If set to -1, returns all
+CUTOFF	Only returns data for players selected in at least this percentage of drafts. So if you pass 10, it means that players selected in less than 10% of all drafts will not be returned. Note that if the value is less than 5, the results may be unpredicatble.
+DETAILS	If set to 1, it returns the leagues that were included in the results. This option only works for the current season.
+aav	AAV results, including when the result were last updated, how many auctions the player was selected in and the average auction value. Average auction value is relative to an auction where a total of $1000 is available across all franchises. Test it!	
+PERIOD	This returns auction data for just auctions that started after the specified period. Valid values are ALL, RECENT, DRAFT, JUNE, JULY, AUG1, AUG15, START, MID, PLAYOFF. This option is not valid for previous seasons.
+IS_PPR	Filters the data returned as follows: If set to 0, data is from leagues that not use a PPR scoring system; if set to 1, only from PPR scoring system; if set to -1 (or not set), all leagues.
+IS_KEEPER	Pass a string with some combination of N, K and R: if N specified, returns data from redraft leagues, if 'K' is specified, returns data for keeper leagues and if 'R' is specified, return data from rookie-only drafts. You can combine these. If you specify 'KR' it will return rookie and keeper drafts only. Default is 'NKR'.
+topAdds	The most added players across all MyFantasyLeague.com-hosted leagues during the current week (or the past 7 days during the pre-season), as well as the percentage of leagues that they've been added in. Only players that have been added in at least 1% of our leagues will be returned. This data would be helpful in creating some sort of "Who's Hot?" list. Test it!	
+COUNT	Limits the result to this many players.
+STATUS	Set this value to FA to only return available free agents. This option is not available for deluxe leagues.
+topDrops	The most dropped players across all MyFantasyLeague.com-hosted leagues during the current week (or the past 7 days during the pre-season), as well as the percentage of leagues that they've been dropped in. Only players that have been dropped in at least 1% of our leagues will be displayed. This data would be helpful in creating some sort of "Who's Cold?" list. Test it!	
+COUNT	Limits the result to this many players.
+STATUS	Set this value to FA to only return available free agents. This option is not available for deluxe leagues.
+topStarters	The most started players across all MyFantasyLeague.com-hosted leagues for the current week, as well as the percentage of leagues that they've been started in. Only players that have been started in at least 1% of our leagues will be displayed. Test it!	
+COUNT	Limits the result to this many players.
+STATUS	Set this value to FA to only return available free agents. This option is not available for deluxe leagues.
+topTrades	The most traded players across all MyFantasyLeague.com-hosted leagues in the current week (or past 7 days during the pre-season), as well as the percentage of leagues that they have been traded in. Only players that are traded in more than 0.25% of our leagues will be displayed. Test it!	
+COUNT	Limits the result to this many players.
+topOwns	The most owned players across all MyFantasyLeague.com-hosted leagues, as well as the percentage of leagues that they're owned in. Only players that are owned in more than 2% of our leagues will be displayed. Test it!	
+COUNT	Limits the result to this many players.
+STATUS	Set this value to FA to only return available free agents. This option is not available for deluxe leagues.
+siteNews	An RSS feed of MyFantayLeague.com site news. Test it!	 
+whoShouldIStart	Site-wide 'Who Should I Start?' data - offering a comparison between any two players at the same position, letting you know what percent of all MFL customers would choose one player over another player. There's two versions of this API. When specifying a league id (and franchise id) it will return the data for the given franchise. When a league id is not specified, use the PLAYERS parameter to pass a list of players to return. Test it!
+Access restricted to league owners.	
+L	League Id(optional)
+WEEK	Show the results for the specified week.
+FRANCHISE	If a league id is specified, show the results for the given franchise's roster, otherwise the caller's franchise.
+PLAYERS	If specified and FRANCHISE not specified, filter the results to the passed player ids (separated by commas).
+NFL Content
+injuries	The player ID, status (IR, Out, Doubtful, Questionable, Inactive, etc.) and details (i.e., 'Knee', 'Foot', 'Ribs', etc.) of all players on the NFL injury report. The report data is updated daily during the season and pre-season. The timestamp attribute tells you the last time this data was updated. Test it!	
+W	If the week is not specified, it defaults to the most recent week that injury data is available.
+nflSchedule	The NFL schedule for one week of the season, including the scheduled kickoff of the game, home team (and their score), the away team (and their score). Starting with the 2020 season, this request will no longer update while games are in progress and it's meant to be used to get the NFL schedule. To obtain the current scores of games, please check out this FAQ. Test it!	
+W	If the week is not specified, it defaults to the current week. If set to 'ALL', it returns the full season schedule.
+nflByeWeeks	The bye weeks for every NFL team. Test it!	
+W	If the week is specified, it returns just the teams with a bye in that week.
+pointsAllowed	Fantasy points allowed by each NFL team, broken out by position. Test it!	
+L	League Id(required)
