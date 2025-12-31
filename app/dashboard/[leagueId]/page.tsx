@@ -424,7 +424,8 @@ export default function LeagueDashboard() {
   }
 
   const navigateToSection = (section: string) => {
-    window.location.href = `/league/${leagueId}/${section}?host=${encodeURIComponent(host)}`
+    const url = `/league/${leagueId}/${section}?host=${encodeURIComponent(host)}&franchiseId=${franchiseId}`
+    window.location.href = url
   }
 
   if (authLoading || !user) {
@@ -461,8 +462,10 @@ export default function LeagueDashboard() {
     return (
       <div style={{minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <div style={{textAlign: 'center'}}>
-          <h1 style={{fontSize: '2rem', fontWeight: '700', color: '#1e293b', marginBottom: '16px'}}>Missing Parameters</h1>
-          <p style={{color: '#64748b', marginBottom: '24px'}}>Franchise ID is required to load the dashboard.</p>
+          <h1 style={{fontSize: '2rem', fontWeight: '700', color: '#1e293b', marginBottom: '16px'}}>Missing Franchise ID</h1>
+          <p style={{color: '#64748b', marginBottom: '24px'}}>
+            Your franchise ID is required to load the dashboard. This should be automatically included when navigating from the leagues page.
+          </p>
           <a href="/dashboard" className="btn-primary">Back to Leagues</a>
         </div>
       </div>
@@ -711,7 +714,7 @@ export default function LeagueDashboard() {
                                       width: '80px',
                                       textAlign: 'right'
                                     }}>
-                                      {player.salary ? `$${player.salary.toLocaleString()}` : '✗'}
+                                      {player.salary ? `${player.salary.toLocaleString()}` : '✗'}
                                     </div>
                                   )}
                                   
@@ -794,131 +797,6 @@ export default function LeagueDashboard() {
                           </div>
                         )
                       })
-                    ) : players.length > 0 ? (
-                      // Fallback to old display if new structure isn't available
-                      players.map((player, index) => {
-                        const currentPos = player.position
-                        const prevPos = index > 0 ? players[index - 1].position : null
-                        const isNewPosition = currentPos !== prevPos
-                        
-                        const elements = []
-                        
-                        // Add clear position separator line
-                        if (isNewPosition && index > 0) {
-                          elements.push(
-                            <div key={`separator-${currentPos}`} style={{
-                              height: '2px',
-                              backgroundColor: '#e2e8f0',
-                              margin: '0'
-                            }} />
-                          )
-                        }
-                        
-                        // Player row without position badge
-                        elements.push(
-                          <div key={player.id} style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '12px',
-                            padding: '8px 16px',
-                            backgroundColor: player.rosterStatus === 'taxi' ? '#fef3c7' : 'white',
-                            borderBottom: '1px solid #f8fafc',
-                            borderLeft: player.rosterStatus === 'taxi' ? '3px solid #f59e0b' : '3px solid transparent',
-                            fontSize: '13px'
-                          }}>
-                            <div style={{
-                              color: '#64748b',
-                              fontSize: '11px',
-                              fontWeight: '600',
-                              flexShrink: 0,
-                              width: '30px',
-                              textAlign: 'center'
-                            }}>
-                              {player.position}
-                            </div>
-                            <div style={{
-                              fontWeight: '600', 
-                              color: '#1e293b',
-                              whiteSpace: 'nowrap',
-                              overflow: 'hidden',
-                              textOverflow: 'ellipsis',
-                              flex: 1,
-                              minWidth: '120px'
-                            }}>
-                              {player.name}
-                              {player.rosterStatus === 'taxi' && (
-                                <span style={{
-                                  fontSize: '10px',
-                                  fontWeight: '500',
-                                  color: '#f59e0b',
-                                  marginLeft: '6px'
-                                }}>
-                                  (TAXI)
-                                </span>
-                              )}
-                            </div>
-                            <div style={{
-                              color: '#64748b',
-                              fontSize: '12px',
-                              fontWeight: '500',
-                              flexShrink: 0,
-                              width: '40px'
-                            }}>
-                              {player.team}
-                            </div>
-                            {player.salary && (
-                              <div style={{
-                                color: '#059669',
-                                fontSize: '12px',
-                                fontWeight: '600',
-                                flexShrink: 0
-                              }}>
-                                ${player.salary.toLocaleString()}
-                              </div>
-                            )}
-                            {player.contractYears ? (
-                              <div style={{
-                                color: '#7c3aed',
-                                fontSize: '11px',
-                                fontWeight: '500',
-                                flexShrink: 0
-                              }}>
-                                {player.contractYears}yr
-                              </div>
-                            ) : (
-                              <div style={{
-                                color: '#dc2626',
-                                fontSize: '12px',
-                                fontWeight: '600',
-                                flexShrink: 0
-                              }}>
-                                ✗
-                              </div>
-                            )}
-                            {player.contractStatus ? (
-                              <div style={{
-                                color: '#64748b',
-                                fontSize: '11px',
-                                fontWeight: '500',
-                                flexShrink: 0
-                              }}>
-                                {player.contractStatus}
-                              </div>
-                            ) : (
-                              <div style={{
-                                color: '#dc2626',
-                                fontSize: '12px',
-                                fontWeight: '600',
-                                flexShrink: 0
-                              }}>
-                                ✗
-                              </div>
-                            )}
-                          </div>
-                        )
-                        
-                        return elements
-                      }).flat()
                     ) : (
                       <div style={{padding: '32px', textAlign: 'center', color: '#64748b'}}>
                         <p style={{fontSize: '14px', marginBottom: '8px'}}>No roster data available</p>
@@ -1243,5 +1121,5 @@ export default function LeagueDashboard() {
         ) : null}
       </main>
     </div>
-  )
+  );
 }
