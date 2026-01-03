@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import { AuthProvider } from '@/lib/auth-provider'
 import './globals.css'
+import './mfl-theme.css'
 
 export const metadata: Metadata = {
-  title: 'MFL UI Rewrite',
-  description: 'A modern interface for MyFantasyLeague.com',
+  title: 'MFL Express',
+  description: 'A lightweight, sleek interface for MyFantasyLeague.com',
 }
 
 export default function RootLayout({

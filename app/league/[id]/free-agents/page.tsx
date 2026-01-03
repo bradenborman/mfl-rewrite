@@ -31,6 +31,7 @@ export default function FreeAgentsPage() {
   const leagueId = params.id as string
   const host = searchParams.get('host') || 'api.myfantasyleague.com'
   const franchiseId = searchParams.get('franchiseId')
+  const year = searchParams.get('year') || new Date().getFullYear().toString()
   
   const [freeAgents, setFreeAgents] = useState<FreeAgent[]>([])
   const [leagueInfo, setLeagueInfo] = useState<any>(null)
@@ -56,7 +57,7 @@ export default function FreeAgentsPage() {
       fetchRosterPlayers()
       fetchBlindBidBalance()
     }
-  }, [user, leagueId, host, authLoading])
+  }, [user, leagueId, host, year, authLoading])
 
   const fetchRosterPlayers = async () => {
     if (!franchiseId) {
@@ -176,7 +177,7 @@ export default function FreeAgentsPage() {
 
       console.log('Fetching free agents with scoring data...')
       
-      // Use playerScores endpoint with AVG and freeagent status
+      // Use playerScores endpoint with AVG and freeagent status (no year param - API doesn't support historical data)
       const freeAgentsResponse = await fetch(
         `/api/mfl?command=export&TYPE=playerScores&L=${leagueId}&W=AVG&STATUS=freeagent&JSON=1&host=${encodeURIComponent(host)}&cookie=${encodeURIComponent(user!.cookie)}`
       )
@@ -312,21 +313,14 @@ export default function FreeAgentsPage() {
       minHeight: '100vh',
       backgroundColor: '#f8fafc'
     }}>
-      <header style={{
-        backgroundColor: 'white',
-        borderBottom: '1px solid #e2e8f0',
-        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
-        position: 'sticky',
-        top: 0,
-        zIndex: 1000
-      }}>
+      <header className="mfl-header">
         <div className="container" style={{paddingTop: '12px', paddingBottom: '12px'}}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
             <div style={{display: 'flex', alignItems: 'center', gap: '16px'}}>
               <a
-                href={`/dashboard/${leagueId}?host=${encodeURIComponent(host)}&franchiseId=${franchiseId || ''}`}
+                href={`/dashboard/${year}/${leagueId}?host=${encodeURIComponent(host)}&franchiseId=${franchiseId || ''}`}
+                className="mfl-nav-link"
                 style={{
-                  color: '#0ea5e9',
                   fontSize: '13px',
                   fontWeight: '600',
                   textDecoration: 'none',
@@ -342,13 +336,13 @@ export default function FreeAgentsPage() {
                 Dashboard
               </a>
               <div>
-                <h1 style={{fontSize: '1.25rem', fontWeight: '600', color: '#1e293b', marginBottom: '0'}}>
+                <h1 style={{fontSize: '1.25rem', fontWeight: '600', color: 'white', marginBottom: '0'}}>
                   Free Agents
                 </h1>
-                <p style={{color: '#64748b', fontSize: '13px', margin: '0'}}>
+                <p style={{color: 'rgba(255, 255, 255, 0.8)', fontSize: '13px', margin: '0'}}>
                   {leagueInfo?.name || `League ${leagueId}`} - {filteredFreeAgents.length} available players
                   {waiverInfo.currentWaiverType && (
-                    <span style={{marginLeft: '8px', color: '#059669', fontWeight: '500'}}>
+                    <span style={{marginLeft: '8px', color: 'rgba(255, 255, 255, 0.9)', fontWeight: '500'}}>
                       • {getWaiverTypeDisplay()}
                     </span>
                   )}
@@ -399,7 +393,7 @@ export default function FreeAgentsPage() {
               {waiverInfo.currentWaiverType?.includes('BBID') && blindBidBalance !== null && (
                 <div>
                   <span style={{color: '#64748b'}}>Available Balance:</span>
-                  <span style={{color: '#059669', fontWeight: '600', marginLeft: '4px'}}>
+                  <span style={{color: 'var(--mfl-primary)', fontWeight: '600', marginLeft: '4px'}}>
                     ${blindBidBalance.toFixed(2)}
                   </span>
                 </div>
@@ -566,8 +560,8 @@ export default function FreeAgentsPage() {
                     transition: 'all 0.2s ease'
                   }}
                   onMouseOver={(e) => {
-                    e.currentTarget.style.backgroundColor = '#f0fdf4'
-                    e.currentTarget.style.borderLeft = '3px solid #059669'
+                    e.currentTarget.style.backgroundColor = '#f0f4ff'
+                    e.currentTarget.style.borderLeft = '3px solid var(--mfl-primary)'
                   }}
                   onMouseOut={(e) => {
                     e.currentTarget.style.backgroundColor = 'white'
@@ -610,7 +604,7 @@ export default function FreeAgentsPage() {
 
                     {/* Average Score */}
                     <div style={{
-                      color: '#059669',
+                      color: 'var(--mfl-primary)',
                       fontSize: '13px',
                       fontWeight: '600',
                       flexShrink: 0,

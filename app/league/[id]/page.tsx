@@ -27,6 +27,7 @@ export default function LeagueOverviewPage() {
   
   const leagueId = params.id as string
   const host = searchParams.get('host') || 'api.myfantasyleague.com'
+  const year = searchParams.get('year') || new Date().getFullYear().toString()
   
   const [leagueInfo, setLeagueInfo] = useState<LeagueInfo | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -36,7 +37,7 @@ export default function LeagueOverviewPage() {
     if (user && leagueId) {
       fetchLeagueInfo()
     }
-  }, [user, leagueId, host])
+  }, [user, leagueId, host, year])
 
   const fetchLeagueInfo = async () => {
     try {
@@ -77,11 +78,11 @@ export default function LeagueOverviewPage() {
   }
 
   const navigateToSection = (section: string) => {
-    window.location.href = `/league/${leagueId}/${section}?host=${encodeURIComponent(host)}`
+    window.location.href = `/league/${leagueId}/${section}?host=${encodeURIComponent(host)}&year=${year}&franchiseId=${searchParams.get('franchiseId') || ''}`
   }
 
   const navigateBack = () => {
-    window.location.href = '/dashboard'
+    window.location.href = `/dashboard/${year}/${leagueId}?host=${encodeURIComponent(host)}&franchiseId=${searchParams.get('franchiseId') || ''}`
   }
 
   if (!user) {

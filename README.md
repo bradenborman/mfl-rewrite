@@ -1,6 +1,6 @@
-# MFL UI Rewrite
+# MFL Express
 
-A modern Next.js interface for MyFantasyLeague.com that provides a better user experience than the existing platform.
+A lightweight, sleek Next.js interface for MyFantasyLeague.com that provides a streamlined user experience.
 
 ## Features
 
@@ -11,6 +11,7 @@ A modern Next.js interface for MyFantasyLeague.com that provides a better user e
 - 📋 Lineup management with validation
 - ⚡ Live scoring with real-time updates
 - 📊 Local data caching for performance
+- 🎨 Official MFL branding and colors
 
 ## Getting Started
 

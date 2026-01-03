@@ -1,0 +1,166 @@
+/* MFL Official Color Theme */
+:root {
+  --mfl-blue: #263E68;
+  --mfl-red: #CD2122;
+  --mfl-blue-light: #3a5a8a;
+  --mfl-blue-dark: #1a2b4a;
+  --mfl-red-light: #e63d3e;
+  --mfl-red-dark: #a11b1c;
+  
+  /* Semantic color mappings */
+  --mfl-primary: var(--mfl-blue);
+  --mfl-primary-light: var(--mfl-blue-light);
+  --mfl-primary-dark: var(--mfl-blue-dark);
+  --mfl-accent: var(--mfl-red);
+  --mfl-accent-light: var(--mfl-red-light);
+  --mfl-accent-dark: var(--mfl-red-dark);
+  
+  /* UI colors */
+  --mfl-success: #059669;
+  --mfl-warning: #f59e0b;
+  --mfl-error: var(--mfl-red);
+  --mfl-info: var(--mfl-blue);
+}
+
+/* MFL Button Styles */
+.btn-mfl-primary {
+  background-color: var(--mfl-primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-mfl-primary:hover {
+  background-color: var(--mfl-primary-light);
+}
+
+.btn-mfl-primary:active {
+  background-color: var(--mfl-primary-dark);
+}
+
+.btn-mfl-secondary {
+  background-color: var(--mfl-accent);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-mfl-secondary:hover {
+  background-color: var(--mfl-accent-light);
+}
+
+.btn-mfl-secondary:active {
+  background-color: var(--mfl-accent-dark);
+}
+
+/* Legacy button support */
+.btn-primary {
+  background-color: var(--mfl-primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--mfl-primary-light);
+}
+
+.btn-secondary {
+  background-color: var(--mfl-accent);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--mfl-accent-light);
+}
+
+/* MFL Card Styles */
+.mfl-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.mfl-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.mfl-card-header {
+  background: linear-gradient(135deg, var(--mfl-primary) 0%, var(--mfl-primary-light) 100%);
+  color: white;
+  padding: 16px 20px;
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+}
+
+/* MFL Header Styles */
+.mfl-header {
+  background: linear-gradient(135deg, var(--mfl-primary) 0%, var(--mfl-primary-light) 100%);
+  color: white;
+  box-shadow: 0 2px 4px 0 rgba(38, 62, 104, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.mfl-nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.mfl-nav-link:hover {
+  color: white;
+}
+
+/* MFL Logo */
+.mfl-logo {
+  height: 32px;
+  width: auto;
+}
+
+/* Grid Cards Layout */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+}

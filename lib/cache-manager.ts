@@ -1,5 +1,5 @@
 /**
- * Cache Manager for MFL UI Rewrite
+ * Cache Manager for MFL Express
  * Handles reading cached data with validation and integrity checking
  */
 

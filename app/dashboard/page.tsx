@@ -14,51 +14,75 @@ export default function LeaguePickerPage() {
   const [leagues, setLeagues] = useState<League[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState('')
+  const [yearsToShow, setYearsToShow] = useState<number[]>([])
 
   useEffect(() => {
-    if (!authLoading && user) {
+    // Try current year and previous year since MFL season might not match calendar year
+    const currentYear = new Date().getFullYear()
+    setYearsToShow([currentYear, currentYear - 1])
+  }, [])
+
+  useEffect(() => {
+    if (!authLoading && user && yearsToShow.length > 0) {
       fetchLeagues()
     }
-  }, [user, authLoading])
+  }, [user, authLoading, yearsToShow])
 
   const fetchLeagues = async () => {
     try {
       setIsLoading(true)
       setError('')
 
-      const response = await fetch(`/api/mfl?command=export&TYPE=myleagues&JSON=1&FRANCHISE_NAMES=1&cookie=${encodeURIComponent(user!.cookie)}`)
-      
-      if (!response.ok) {
-        throw new Error(`Failed to fetch leagues: ${response.status}`)
-      }
+      let allLeagues: League[] = []
 
-      const data = await response.json()
-      
-      let leagueList: League[] = []
-      if (data.leagues?.league) {
-        const rawLeagues = Array.isArray(data.leagues.league) ? data.leagues.league : [data.leagues.league]
-        
-        leagueList = rawLeagues.map((mflLeague: any) => {
-          let host = 'api.myfantasyleague.com'
-          if (mflLeague.url) {
-            const urlMatch = mflLeague.url.match(/https?:\/\/([^\/]+)/)
-            if (urlMatch) {
-              host = urlMatch[1]
+      // Fetch leagues for each year (try current and previous year since MFL season timing varies)
+      for (const year of yearsToShow) {
+        try {
+          const response = await fetch(`/api/mfl?command=export&TYPE=myleagues&YEAR=${year}&JSON=1&FRANCHISE_NAMES=1&cookie=${encodeURIComponent(user!.cookie)}`)
+          
+          if (response.ok) {
+            const data = await response.json()
+            
+            if (data.leagues?.league) {
+              const rawLeagues = Array.isArray(data.leagues.league) ? data.leagues.league : [data.leagues.league]
+              
+              const yearLeagues = rawLeagues.map((mflLeague: any) => {
+                let host = 'api.myfantasyleague.com'
+                if (mflLeague.url) {
+                  const urlMatch = mflLeague.url.match(/https?:\/\/([^\/]+)/)
+                  if (urlMatch) {
+                    host = urlMatch[1]
+                  }
+                }
+
+                return {
+                  id: mflLeague.league_id,
+                  name: mflLeague.name,
+                  year: year,
+                  host,
+                  franchiseId: mflLeague.franchise_id,
+                  franchiseName: mflLeague.franchise_name || `Team ${mflLeague.franchise_id}`
+                }
+              })
+
+              allLeagues = [...allLeagues, ...yearLeagues]
             }
           }
-
-          return {
-            id: mflLeague.league_id,
-            name: mflLeague.name,
-            year: parseInt(mflLeague.year) || 2025,
-            host,
-            franchiseId: mflLeague.franchise_id,
-            franchiseName: mflLeague.franchise_name || `Team ${mflLeague.franchise_id}`
-          }
-        })
+        } catch (yearError) {
+          console.warn(`Failed to fetch leagues for year ${year}:`, yearError)
+          // Continue with other years even if one fails
+        }
       }
 
-      setLeagues(leagueList)
+      // Sort leagues by year (newest first), then by name
+      allLeagues.sort((a, b) => {
+        if (a.year !== b.year) {
+          return b.year - a.year // Newest first
+        }
+        return a.name.localeCompare(b.name)
+      })
+
+      setLeagues(allLeagues)
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to load leagues'
       setError(errorMessage)
@@ -73,8 +97,8 @@ export default function LeaguePickerPage() {
   }
 
   const handleLeagueClick = (league: League) => {
-    // Navigate to the actual dashboard for this league, including franchise ID
-    const url = `/dashboard/${league.id}?host=${encodeURIComponent(league.host)}&franchiseId=${league.franchiseId}`
+    // Navigate to the actual dashboard for this league, including franchise ID and year
+    const url = `/dashboard/${league.year}/${league.id}?host=${encodeURIComponent(league.host)}&franchiseId=${league.franchiseId}`
     window.location.href = url
   }
 
@@ -88,7 +112,7 @@ export default function LeaguePickerPage() {
                 width: '48px', 
                 height: '48px', 
                 border: '4px solid #e2e8f0', 
-                borderTop: '4px solid #059669',
+                borderTop: '4px solid var(--mfl-primary)',
                 borderRadius: '50%',
                 animation: 'spin 1s linear infinite',
                 margin: '0 auto 16px'
@@ -110,16 +134,16 @@ export default function LeaguePickerPage() {
   return (
     <div style={{minHeight: '100vh', backgroundColor: '#f8fafc'}}>
       {/* Header */}
-      <header style={{backgroundColor: 'white', borderBottom: '1px solid #e2e8f0', boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)'}}>
+      <header className="mfl-header">
         <div className="container" style={{paddingTop: '24px', paddingBottom: '24px'}}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
             <div>
-              <h1 style={{fontSize: '2rem', fontWeight: '700', color: '#1e293b', marginBottom: '4px'}}>
+              <h1 style={{fontSize: '2rem', fontWeight: '700', color: 'white', marginBottom: '4px'}}>
                 Select Your League
               </h1>
-              <p style={{color: '#64748b', fontSize: '14px'}}>Welcome back, {user.username}</p>
+              <p style={{color: 'rgba(255, 255, 255, 0.8)', fontSize: '14px'}}>Welcome back, {user.username}</p>
             </div>
-            <button onClick={handleLogout} className="btn-secondary">
+            <button onClick={handleLogout} className="btn-mfl-secondary">
               Logout
             </button>
           </div>
@@ -156,7 +180,7 @@ export default function LeaguePickerPage() {
               width: '48px', 
               height: '48px', 
               border: '4px solid #e2e8f0', 
-              borderTop: '4px solid #059669',
+              borderTop: '4px solid var(--mfl-primary)',
               borderRadius: '50%',
               animation: 'spin 1s linear infinite',
               margin: '0 auto 16px'
@@ -165,49 +189,65 @@ export default function LeaguePickerPage() {
           </div>
         ) : leagues.length > 0 ? (
           <div style={{maxWidth: '800px', margin: '0 auto'}}>
-            <div className="grid-cards">
-              {leagues.map((league) => (
-                <div
-                  key={`${league.host}-${league.id}`}
-                  className="mfl-card"
-                  style={{padding: '32px', cursor: 'pointer'}}
-                  onClick={() => handleLeagueClick(league)}
-                >
-                  <div style={{textAlign: 'center'}}>
-                    <h3 style={{fontSize: '1.5rem', fontWeight: '600', color: '#1e293b', marginBottom: '8px'}}>
-                      {league.name}
-                    </h3>
-                    <p style={{color: '#64748b', marginBottom: '24px', fontSize: '14px'}}>
-                      {league.year} Season
-                    </p>
-                    
-                    <div style={{display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '24px'}}>
-                      <div style={{textAlign: 'center'}}>
-                        <dt style={{fontSize: '12px', color: '#64748b', marginBottom: '4px'}}>League ID</dt>
-                        <dd style={{fontSize: '14px', fontWeight: '600', color: '#1e293b', fontFamily: 'monospace', backgroundColor: '#f1f5f9', padding: '4px 8px', borderRadius: '4px'}}>
-                          {league.id}
-                        </dd>
-                      </div>
-                      {league.franchiseId && (
-                        <div style={{textAlign: 'center'}}>
-                          <dt style={{fontSize: '12px', color: '#64748b', marginBottom: '4px'}}>Your Team</dt>
-                          <dd style={{fontSize: '14px', fontWeight: '600', color: '#1e293b', backgroundColor: '#f0f9ff', padding: '4px 8px', borderRadius: '4px', border: '1px solid #bae6fd'}}>
-                            {league.franchiseName || `Team ${league.franchiseId}`}
-                          </dd>
-                        </div>
-                      )}
-                    </div>
+            {/* Current year leagues only */}
+            {yearsToShow.map(year => {
+              const yearLeagues = leagues.filter(league => league.year === year)
+              if (yearLeagues.length === 0) return null
 
-                    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', color: '#0ea5e9', fontSize: '16px', fontWeight: '600'}}>
-                      Enter Dashboard
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
+              return (
+                <div key={year} style={{marginBottom: '32px'}}>
+                  <h2 style={{
+                    fontSize: '1.5rem',
+                    fontWeight: '600',
+                    color: 'var(--mfl-primary)',
+                    marginBottom: '16px',
+                    textAlign: 'center'
+                  }}>
+                    {year} Season
+                  </h2>
+                  <div className="grid-cards">
+                    {yearLeagues.map((league) => (
+                      <div
+                        key={`${league.host}-${league.id}`}
+                        className="mfl-card"
+                        style={{padding: '32px', cursor: 'pointer'}}
+                        onClick={() => handleLeagueClick(league)}
+                      >
+                        <div style={{textAlign: 'center'}}>
+                          <h3 style={{fontSize: '1.25rem', fontWeight: '600', color: '#1e293b', marginBottom: '8px'}}>
+                            {league.name}
+                          </h3>
+                          
+                          <div style={{display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '24px'}}>
+                            <div style={{textAlign: 'center'}}>
+                              <dt style={{fontSize: '12px', color: '#64748b', marginBottom: '4px'}}>League ID</dt>
+                              <dd style={{fontSize: '14px', fontWeight: '600', color: '#1e293b', fontFamily: 'monospace', backgroundColor: '#f1f5f9', padding: '4px 8px', borderRadius: '4px'}}>
+                                {league.id}
+                              </dd>
+                            </div>
+                            {league.franchiseId && (
+                              <div style={{textAlign: 'center'}}>
+                                <dt style={{fontSize: '12px', color: '#64748b', marginBottom: '4px'}}>Your Team</dt>
+                                <dd style={{fontSize: '14px', fontWeight: '600', color: '#1e293b', backgroundColor: '#f0f9ff', padding: '4px 8px', borderRadius: '4px', border: '1px solid #bae6fd'}}>
+                                  {league.franchiseName || `Team ${league.franchiseId}`}
+                                </dd>
+                              </div>
+                            )}
+                          </div>
+
+                          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', color: 'var(--mfl-primary)', fontSize: '16px', fontWeight: '600'}}>
+                            Enter Dashboard
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{width: '20px', height: '20px'}}>
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
+              )
+            })}
           </div>
         ) : (
           <div style={{textAlign: 'center', padding: '64px 0'}}>

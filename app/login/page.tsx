@@ -90,27 +90,27 @@ export default function LoginPage() {
         {/* Header */}
         <div style={{textAlign: 'center', marginBottom: '32px'}}>
           <div style={{
-            width: '80px',
-            height: '80px',
-            backgroundColor: '#059669',
-            borderRadius: '16px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            margin: '0 auto 24px',
-            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
+            margin: '0 auto 24px'
           }}>
-            <svg fill="none" stroke="white" viewBox="0 0 24 24" style={{width: '40px', height: '40px'}}>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+            <img 
+              src="/mfl-logo.png" 
+              alt="MyFantasyLeague.com" 
+              style={{
+                height: '80px',
+                width: 'auto'
+              }}
+            />
           </div>
           <h1 style={{
             fontSize: '2rem',
             fontWeight: '700',
-            color: '#1e293b',
+            color: 'var(--mfl-primary)',
             marginBottom: '8px'
           }}>
-            MFL UI Rewrite
+            MFL Express
           </h1>
           <p style={{
             fontSize: '16px',
@@ -154,7 +154,7 @@ export default function LoginPage() {
                 }}
                 onFocus={(e) => {
                   if (!validationErrors.username) {
-                    e.target.style.borderColor = '#059669'
+                    e.target.style.borderColor = 'var(--mfl-primary)'
                   }
                 }}
                 onBlur={(e) => {
@@ -205,7 +205,7 @@ export default function LoginPage() {
                 }}
                 onFocus={(e) => {
                   if (!validationErrors.password) {
-                    e.target.style.borderColor = '#059669'
+                    e.target.style.borderColor = 'var(--mfl-primary)'
                   }
                 }}
                 onBlur={(e) => {
@@ -266,7 +266,7 @@ export default function LoginPage() {
               style={{
                 width: '100%',
                 padding: '14px 20px',
-                backgroundColor: isLoading ? '#9ca3af' : '#059669',
+                backgroundColor: isLoading ? '#9ca3af' : 'var(--mfl-primary)',
                 color: 'white',
                 border: 'none',
                 borderRadius: '8px',
@@ -281,12 +281,12 @@ export default function LoginPage() {
               }}
               onMouseOver={(e) => {
                 if (!isLoading) {
-                  e.currentTarget.style.backgroundColor = '#047857'
+                  e.currentTarget.style.backgroundColor = 'var(--mfl-primary-light)'
                 }
               }}
               onMouseOut={(e) => {
                 if (!isLoading) {
-                  e.currentTarget.style.backgroundColor = '#059669'
+                  e.currentTarget.style.backgroundColor = 'var(--mfl-primary)'
                 }
               }}
             >
@@ -330,7 +330,7 @@ export default function LoginPage() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                color: '#059669',
+                color: 'var(--mfl-primary)',
                 fontWeight: '600',
                 textDecoration: 'none'
               }}
@@ -352,13 +352,13 @@ export default function LoginPage() {
               gap: '8px',
               marginBottom: '8px'
             }}>
-              <svg fill="none" stroke="#059669" viewBox="0 0 24 24" style={{width: '16px', height: '16px'}}>
+              <svg fill="none" stroke="var(--mfl-primary)" viewBox="0 0 24 24" style={{width: '16px', height: '16px'}}>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
               <span style={{
                 fontSize: '12px',
                 fontWeight: '600',
-                color: '#059669'
+                color: 'var(--mfl-primary)'
               }}>
                 Secure Connection
               </span>

@@ -37,6 +37,7 @@ export default function AllRostersPage() {
   
   const leagueId = params.id as string
   const host = searchParams.get('host') || 'api.myfantasyleague.com'
+  const year = searchParams.get('year') || new Date().getFullYear().toString()
   
   const [rosters, setRosters] = useState<FranchiseRoster[]>([])
   const [leagueInfo, setLeagueInfo] = useState<any>(null)
@@ -48,7 +49,7 @@ export default function AllRostersPage() {
     if (!authLoading && user && leagueId) {
       fetchAllRosters()
     }
-  }, [user, leagueId, host, authLoading])
+  }, [user, leagueId, host, year, authLoading])
 
   const fetchAllRosters = async () => {
     try {
@@ -211,21 +212,14 @@ export default function AllRostersPage() {
       minHeight: '100vh',
       backgroundColor: '#f8fafc'
     }}>
-      <header style={{
-        backgroundColor: 'white',
-        borderBottom: '1px solid #e2e8f0',
-        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
-        position: 'sticky',
-        top: 0,
-        zIndex: 1000
-      }}>
+      <header className="mfl-header">
         <div className="container" style={{paddingTop: '12px', paddingBottom: '12px'}}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
             <div style={{display: 'flex', alignItems: 'center', gap: '16px'}}>
               <a
-                href={`/dashboard/${leagueId}?host=${encodeURIComponent(host)}&franchiseId=${searchParams.get('franchiseId') || ''}`}
+                href={`/dashboard/${year}/${leagueId}?host=${encodeURIComponent(host)}&franchiseId=${searchParams.get('franchiseId') || ''}`}
+                className="mfl-nav-link"
                 style={{
-                  color: '#0ea5e9',
                   fontSize: '13px',
                   fontWeight: '600',
                   textDecoration: 'none',
@@ -241,10 +235,10 @@ export default function AllRostersPage() {
                 Dashboard
               </a>
               <div>
-                <h1 style={{fontSize: '1.25rem', fontWeight: '600', color: '#1e293b', marginBottom: '0'}}>
+                <h1 style={{fontSize: '1.25rem', fontWeight: '600', color: 'white', marginBottom: '0'}}>
                   All Rosters
                 </h1>
-                <p style={{color: '#64748b', fontSize: '13px', margin: '0'}}>
+                <p style={{color: 'rgba(255, 255, 255, 0.8)', fontSize: '13px', margin: '0'}}>
                   {leagueInfo?.name || `League ${leagueId}`} - {rosters.length} Teams
                 </p>
               </div>
