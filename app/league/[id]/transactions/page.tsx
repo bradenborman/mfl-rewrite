@@ -34,6 +34,7 @@ export default function TransactionsPage() {
   const [selectedTypes, setSelectedTypes] = useState<TransactionType[]>(Object.values(TransactionType))
   const [playersData, setPlayersData] = useState<{[key: string]: any}>({})
   const [franchisesData, setFranchisesData] = useState<{[key: string]: any}>({})
+  const [typeFilter, setTypeFilter] = useState<string[]>(['BBID_WAIVER', 'FREE_AGENT', 'TRADE', 'IR', 'TAXI'])
 
   // Load player data
   useEffect(() => {
@@ -359,12 +360,33 @@ export default function TransactionsPage() {
                 'BBID_WAIVER_REQUEST',
                 'WAIVER_REQUEST'
               ];
-              return !excludedTypes.includes(trans.type);
+              if (excludedTypes.includes(trans.type)) {
+                return false;
+              }
+
+              // Third filter: Apply user's type filter
+              return typeFilter.includes(trans.type);
             })
         : [])
     : []
 
   const groupedTransactions = groupTransactionsByDate(filteredTransactions)
+
+  const handleTypeFilterChange = (type: string, checked: boolean) => {
+    if (checked) {
+      setTypeFilter(prev => [...prev, type])
+    } else {
+      setTypeFilter(prev => prev.filter(t => t !== type))
+    }
+  }
+
+  const handleSelectAllTypes = () => {
+    setTypeFilter(['BBID_WAIVER', 'FREE_AGENT', 'TRADE', 'IR', 'TAXI'])
+  }
+
+  const handleSelectNoTypes = () => {
+    setTypeFilter([])
+  }
 
   return (
     <div style={{
@@ -405,6 +427,92 @@ export default function TransactionsPage() {
       </header>
 
       <main className="container" style={{paddingTop: '20px', paddingBottom: '32px'}}>
+        {/* Transaction Type Filter */}
+        <div className="mfl-card" style={{marginBottom: '20px', padding: '16px'}}>
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px'}}>
+            <h3 style={{fontSize: '14px', fontWeight: '600', color: '#1e293b', margin: '0'}}>
+              Filter by Type
+            </h3>
+            <div style={{display: 'flex', gap: '8px'}}>
+              <button 
+                onClick={handleSelectAllTypes}
+                style={{
+                  fontSize: '11px',
+                  padding: '4px 8px',
+                  backgroundColor: 'transparent',
+                  color: 'var(--mfl-primary)',
+                  border: '1px solid var(--mfl-primary)',
+                  borderRadius: '3px',
+                  cursor: 'pointer'
+                }}
+              >
+                All
+              </button>
+              <button 
+                onClick={handleSelectNoTypes}
+                style={{
+                  fontSize: '11px',
+                  padding: '4px 8px',
+                  backgroundColor: 'transparent',
+                  color: '#64748b',
+                  border: '1px solid #64748b',
+                  borderRadius: '3px',
+                  cursor: 'pointer'
+                }}
+              >
+                None
+              </button>
+            </div>
+          </div>
+          
+          <div style={{display: 'flex', flexWrap: 'wrap', gap: '8px'}}>
+            {['BBID_WAIVER', 'FREE_AGENT', 'TRADE', 'IR', 'TAXI'].map(type => (
+              <label 
+                key={type}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  padding: '6px 10px',
+                  backgroundColor: typeFilter.includes(type) ? 'rgba(38, 62, 104, 0.1)' : '#f8fafc',
+                  border: `1px solid ${typeFilter.includes(type) ? 'var(--mfl-primary)' : '#e2e8f0'}`,
+                  borderRadius: '6px',
+                  cursor: 'pointer',
+                  fontSize: '12px',
+                  fontWeight: '500',
+                  color: typeFilter.includes(type) ? 'var(--mfl-primary)' : '#64748b',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseOver={(e) => {
+                  if (!typeFilter.includes(type)) {
+                    e.currentTarget.style.backgroundColor = '#f1f5f9'
+                    e.currentTarget.style.borderColor = '#cbd5e1'
+                  }
+                }}
+                onMouseOut={(e) => {
+                  if (!typeFilter.includes(type)) {
+                    e.currentTarget.style.backgroundColor = '#f8fafc'
+                    e.currentTarget.style.borderColor = '#e2e8f0'
+                  }
+                }}
+              >
+                <input
+                  type="checkbox"
+                  checked={typeFilter.includes(type)}
+                  onChange={(e) => handleTypeFilterChange(type, e.target.checked)}
+                  style={{margin: '0'}}
+                />
+                {getTransactionDisplayName(type)}
+              </label>
+            ))}
+          </div>
+          
+          <div style={{marginTop: '8px', fontSize: '11px', color: '#64748b'}}>
+            Showing {filteredTransactions.length} of {transactionData?.transactions?.transaction ? 
+              (Array.isArray(transactionData.transactions.transaction) ? transactionData.transactions.transaction.length : 1) : 0} transactions
+          </div>
+        </div>
+
         {groupedTransactions.length > 0 ? (
           <div>
             {groupedTransactions.map((group) => (
@@ -437,114 +545,131 @@ export default function TransactionsPage() {
                 <div>
                   {group.transactions.map((trans: any, index: number) => (
                     <div key={index} style={{
-                      padding: '16px 20px',
+                      padding: '12px 20px',
                       borderBottom: index < group.transactions.length - 1 ? '1px solid #f1f5f9' : 'none'
                     }}>
-                      <div style={{display: 'flex', alignItems: 'flex-start', gap: '12px'}}>
-                        <div style={{
-                          fontSize: '16px',
-                          flexShrink: 0,
-                          marginTop: '2px'
-                        }}>
-                          {trans.type === 'TRADE' ? '🔄' : 
-                           trans.type === 'BBID_WAIVER' ? '💰' :
-                           trans.type === 'WAIVER' ? '📋' :
-                           trans.type === 'FREE_AGENT' ? '✍️' :
-                           trans.type === 'IR' ? '🏥' :
-                           trans.type === 'TAXI' ? '🚕' : '📝'}
+                      <div style={{display: 'grid', gridTemplateColumns: '120px 150px 1fr 80px', gap: '16px', alignItems: 'center'}}>
+                        {/* Time & Type */}
+                        <div>
+                          <div style={{
+                            fontSize: '11px',
+                            fontWeight: '600',
+                            color: 'var(--mfl-primary)',
+                            backgroundColor: 'rgba(38, 62, 104, 0.1)',
+                            padding: '2px 6px',
+                            borderRadius: '3px',
+                            marginBottom: '2px',
+                            display: 'inline-block'
+                          }}>
+                            {getTransactionDisplayName(trans.type)}
+                          </div>
+                          <div style={{fontSize: '11px', color: '#64748b'}}>
+                            {new Date(parseInt(trans.timestamp) * 1000).toLocaleTimeString('en-US', { 
+                              hour: 'numeric', 
+                              minute: '2-digit',
+                              hour12: true 
+                            })}
+                          </div>
                         </div>
-                        <div style={{flex: 1}}>
-                          <div style={{display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px'}}>
-                            <span style={{
-                              fontSize: '12px',
-                              fontWeight: '600',
-                              color: 'var(--mfl-primary)',
-                              backgroundColor: 'rgba(38, 62, 104, 0.1)',
-                              padding: '2px 6px',
-                              borderRadius: '4px'
-                            }}>
-                              {getTransactionDisplayName(trans.type)}
-                            </span>
-                            <span style={{fontSize: '12px', color: '#64748b'}}>
-                              {new Date(parseInt(trans.timestamp) * 1000).toLocaleTimeString('en-US', { 
-                                hour: 'numeric', 
-                                minute: '2-digit',
-                                hour12: true 
-                              })}
-                            </span>
-                          </div>
+
+                        {/* Team */}
+                        <div style={{fontSize: '13px', fontWeight: '500', color: '#1e293b'}}>
+                          {getFranchiseName(trans.franchise)}
+                          {trans.type === 'TRADE' && (
+                            <div style={{fontSize: '11px', color: '#64748b', marginTop: '1px'}}>
+                              ↔ {getFranchiseName(trans.franchise2)}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Transaction Details */}
+                        <div style={{fontSize: '13px', color: '#1e293b'}}>
+                          {trans.type === 'TRADE' && (
+                            <div style={{display: 'flex', flexDirection: 'column', gap: '4px'}}>
+                              <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
+                                <span style={{fontSize: '11px', color: '#64748b', minWidth: '60px'}}>
+                                  {getFranchiseName(trans.franchise)}:
+                                </span>
+                                <span style={{color: '#1e293b'}}>
+                                  {trans.franchise1_gave_up ? 
+                                    trans.franchise1_gave_up.split(',').filter((id: string) => id.trim()).map((playerId: string) => getPlayerName(playerId.trim())).join(', ')
+                                    : 'None'}
+                                </span>
+                              </div>
+                              <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
+                                <span style={{fontSize: '11px', color: '#64748b', minWidth: '60px'}}>
+                                  {getFranchiseName(trans.franchise2)}:
+                                </span>
+                                <span style={{color: '#1e293b'}}>
+                                  {trans.franchise2_gave_up ? 
+                                    trans.franchise2_gave_up.split(',').filter((id: string) => id.trim()).map((playerId: string) => getPlayerName(playerId.trim())).join(', ')
+                                    : 'None'}
+                                </span>
+                              </div>
+                            </div>
+                          )}
                           
-                          <div style={{fontSize: '14px', fontWeight: '500', color: '#1e293b', lineHeight: '1.4'}}>
-                            <span style={{color: '#64748b'}}>{getFranchiseName(trans.franchise)}:</span>
-                            
-                            {trans.type === 'TRADE' && (
-                              <div style={{marginTop: '8px'}}>
-                                <div><strong>Trade with {getFranchiseName(trans.franchise2)}:</strong></div>
-                                <div style={{marginLeft: '16px', marginTop: '4px'}}>
-                                  <div>{getFranchiseName(trans.franchise)} gave up: {
-                                    trans.franchise1_gave_up ? 
-                                      trans.franchise1_gave_up.split(',').filter((id: string) => id.trim()).map((playerId: string) => getPlayerName(playerId.trim())).join(', ')
-                                      : 'None'
-                                  }</div>
-                                  <div>{getFranchiseName(trans.franchise2)} gave up: {
-                                    trans.franchise2_gave_up ? 
-                                      trans.franchise2_gave_up.split(',').filter((id: string) => id.trim()).map((playerId: string) => getPlayerName(playerId.trim())).join(', ')
-                                      : 'None'
-                                  }</div>
-                                </div>
-                              </div>
-                            )}
-                            
-                            {trans.type === 'TAXI' && (
-                              <div style={{marginTop: '4px'}}>
-                                {trans.promoted && trans.promoted !== '' && (
-                                  <span>Promoted <strong>{getPlayerName(trans.promoted.replace(',', ''))}</strong> from taxi squad</span>
-                                )}
-                                {trans.demoted && trans.demoted !== '' && (
-                                  <span>Moved <strong>{getPlayerName(trans.demoted.replace(',', ''))}</strong> to taxi squad</span>
-                                )}
-                              </div>
-                            )}
+                          {trans.type === 'TAXI' && (
+                            <div>
+                              {trans.promoted && trans.promoted !== '' && (
+                                <span style={{color: '#059669'}}>➕ {getPlayerName(trans.promoted.replace(',', ''))} from taxi</span>
+                              )}
+                              {trans.demoted && trans.demoted !== '' && (
+                                <span style={{color: '#dc2626'}}>➖ {getPlayerName(trans.demoted.replace(',', ''))} to taxi</span>
+                              )}
+                            </div>
+                          )}
 
-                            {trans.type === 'IR' && (
-                              <div style={{marginTop: '4px'}}>
-                                {trans.activated && (
-                                  <span>Activated <strong>{getPlayerName(trans.activated.replace(',', ''))}</strong> from IR</span>
-                                )}
-                                {trans.deactivated && (
-                                  <span>Moved <strong>{getPlayerName(trans.deactivated.replace(',', ''))}</strong> to IR</span>
-                                )}
-                              </div>
-                            )}
+                          {trans.type === 'IR' && (
+                            <div>
+                              {trans.activated && (
+                                <span style={{color: '#059669'}}>➕ {getPlayerName(trans.activated.replace(',', ''))} from IR</span>
+                              )}
+                              {trans.deactivated && (
+                                <span style={{color: '#dc2626'}}>➖ {getPlayerName(trans.deactivated.replace(',', ''))} to IR</span>
+                              )}
+                            </div>
+                          )}
 
-                            {(trans.type === 'BBID_WAIVER' || trans.type === 'WAIVER' || trans.type === 'FREE_AGENT') && trans.transaction && (
-                              <div style={{marginTop: '4px'}}>
-                                {(() => {
-                                  if (trans.type === 'FREE_AGENT') {
-                                    const playerAdded = trans.transaction.replace(/[|,]/g, '');
-                                    return <span>Signed <strong>{getPlayerName(playerAdded)}</strong></span>;
-                                  } else {
-                                    const parts = trans.transaction.split('|');
-                                    if (parts.length >= 2) {
-                                      const playerAdded = parts[0].replace(',', '');
-                                      const bidAmount = parts[1];
-                                      const playerDropped = parts[2] ? parts[2].replace(',', '') : null;
-                                      
-                                      return (
-                                        <span>
-                                          {trans.type === 'BBID_WAIVER' ? 'Won' : 'Claimed'} <strong>{getPlayerName(playerAdded)}</strong>
-                                          {trans.type === 'BBID_WAIVER' && bidAmount && <span> for ${bidAmount}</span>}
-                                          {playerDropped && <span>, dropped <strong>{getPlayerName(playerDropped)}</strong></span>}
+                          {(trans.type === 'BBID_WAIVER' || trans.type === 'WAIVER' || trans.type === 'FREE_AGENT') && trans.transaction && (
+                            <div>
+                              {(() => {
+                                if (trans.type === 'FREE_AGENT') {
+                                  const playerAdded = trans.transaction.replace(/[|,]/g, '');
+                                  return <span style={{color: '#dc2626'}}>➖ {getPlayerName(playerAdded)}</span>;
+                                } else {
+                                  const parts = trans.transaction.split('|');
+                                  if (parts.length >= 2) {
+                                    const playerAdded = parts[0].replace(',', '');
+                                    const bidAmount = parts[1];
+                                    const playerDropped = parts[2] ? parts[2].replace(',', '') : null;
+                                    
+                                    return (
+                                      <div style={{display: 'flex', gap: '20px'}}>
+                                        <span style={{color: '#059669'}}>
+                                          ➕ {getPlayerName(playerAdded)}
                                         </span>
-                                      );
-                                    } else {
-                                      return <span>{trans.transaction}</span>;
-                                    }
+                                        {playerDropped && (
+                                          <span style={{color: '#dc2626'}}>➖ {getPlayerName(playerDropped)}</span>
+                                        )}
+                                      </div>
+                                    );
+                                  } else {
+                                    return <span>{trans.transaction}</span>;
                                   }
-                                })()}
-                              </div>
-                            )}
-                          </div>
+                                }
+                              })()}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Bid Amount (if applicable) */}
+                        <div style={{textAlign: 'right', fontSize: '12px', fontWeight: '600', color: '#059669'}}>
+                          {trans.type === 'BBID_WAIVER' && trans.transaction && (() => {
+                            const parts = trans.transaction.split('|');
+                            const bidAmount = parts.length >= 2 ? parts[1] : null;
+                            return bidAmount ? `$${bidAmount}` : '';
+                          })()}
                         </div>
                       </div>
                     </div>
@@ -555,7 +680,6 @@ export default function TransactionsPage() {
           </div>
         ) : (
           <div style={{textAlign: 'center', padding: '64px 0'}}>
-            <div style={{marginBottom: '16px', fontSize: '48px'}}>📝</div>
             <h3 style={{fontSize: '1.5rem', fontWeight: '600', color: '#1e293b', marginBottom: '8px'}}>
               No Recent Transactions
             </h3>
