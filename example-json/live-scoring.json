@@ -1,0 +1,3680 @@
+{
+"liveScoring": {
+"matchup": [
+{
+"franchise": [
+{
+"score": "99.50",
+"players": {},
+"playersCurrentlyPlaying": "0",
+"isHome": "0",
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0",
+"id": "0003"
+},
+{
+"playersCurrentlyPlaying": "0",
+"players": {},
+"score": "117.38",
+"id": "AVG",
+"isHome": "1",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0"
+}
+]
+},
+{
+"franchise": [
+{
+"score": "99.50",
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"updatedStats": "",
+"id": "16174",
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "8.00",
+"id": "16618",
+"updatedStats": ""
+},
+{
+"id": "17098",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "2.00",
+"id": "17134",
+"updatedStats": ""
+},
+{
+"id": "16164",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "2.00"
+},
+{
+"id": "17083",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "5.00"
+},
+{
+"updatedStats": "",
+"id": "17099",
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "9.00",
+"id": "16269",
+"updatedStats": ""
+},
+{
+"id": "17106",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "3.00"
+},
+{
+"id": "17175",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "1.00"
+},
+{
+"updatedStats": "",
+"id": "16596",
+"score": "6.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"score": "27.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "14779"
+},
+{
+"score": "1.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "13671"
+},
+{
+"updatedStats": "",
+"id": "15284",
+"score": "7.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "17184",
+"score": "2.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "28.00",
+"id": "15238",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "16.50",
+"id": "15253",
+"updatedStats": ""
+},
+{
+"id": "17058",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00"
+},
+{
+"updatedStats": "",
+"id": "17075",
+"score": "3.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "16579",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "23.00"
+}
+]
+},
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"isHome": "0",
+"id": "0003"
+},
+{
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0",
+"isHome": "1",
+"id": "0012",
+"score": "141.50",
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "25.00",
+"id": "16617",
+"updatedStats": ""
+},
+{
+"id": "16194",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00"
+},
+{
+"id": "15799",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "7.00"
+},
+{
+"id": "17080",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "2.00"
+},
+{
+"id": "16644",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00"
+},
+{
+"score": "8.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "13641"
+},
+{
+"updatedStats": "",
+"id": "14122",
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "19.00",
+"id": "14105",
+"updatedStats": ""
+},
+{
+"score": "6.50",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "15972"
+},
+{
+"updatedStats": "",
+"id": "16598",
+"score": "11.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"updatedStats": "",
+"id": "16213",
+"score": "14.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "2.00",
+"id": "17056",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "16581",
+"score": "19.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "9.00",
+"id": "17074",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "16639",
+"score": "4.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"score": "23.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "16211"
+},
+{
+"id": "16583",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "23.00"
+},
+{
+"id": "17047",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "12.00"
+},
+{
+"score": "0.50",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "15254"
+}
+]
+}
+}
+]
+},
+{
+"franchise": [
+{
+"score": "127.50",
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"updatedStats": "",
+"id": "14073",
+"score": "12.50",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"score": "6.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "13629"
+},
+{
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "10700"
+},
+{
+"score": "7.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "12620"
+},
+{
+"score": "10.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16169"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "3.50",
+"id": "15716",
+"updatedStats": ""
+},
+{
+"id": "17031",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "17.50",
+"id": "13130",
+"updatedStats": ""
+},
+{
+"score": "6.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "14835"
+},
+{
+"id": "16184",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "14.00"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "12.00",
+"id": "13299",
+"updatedStats": ""
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "13131",
+"updatedStats": ""
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "1.00",
+"id": "16649",
+"updatedStats": ""
+},
+{
+"id": "15711",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "3.50"
+},
+{
+"score": "13.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "9431"
+},
+{
+"score": "9.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "11675"
+},
+{
+"id": "14056",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "17.00"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "18.00",
+"id": "13630",
+"updatedStats": ""
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "12.00",
+"id": "13132",
+"updatedStats": ""
+},
+{
+"id": "15753",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "22.00"
+}
+]
+},
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"isHome": "0",
+"id": "0005"
+},
+{
+"id": "0001",
+"isHome": "1",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"players": {
+"player": [
+{
+"updatedStats": "",
+"id": "17043",
+"score": "9.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"updatedStats": "",
+"id": "10313",
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"id": "17042",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "10.00"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "11.00",
+"id": "14833",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "16586",
+"score": "10.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"updatedStats": "",
+"id": "17234",
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"score": "15.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16616"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "16186",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "5.00",
+"id": "15331",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "5.00",
+"id": "13592",
+"updatedStats": ""
+},
+{
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16152"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "1.00",
+"id": "11938",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "5.00",
+"id": "13772",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "16643",
+"score": "4.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"id": "15768",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "4.00"
+},
+{
+"id": "16185",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "19.00"
+},
+{
+"id": "16181",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "11.00"
+},
+{
+"updatedStats": "",
+"id": "15786",
+"score": "3.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "16747",
+"score": "4.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"id": "17057",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00"
+}
+]
+},
+"playersCurrentlyPlaying": "0",
+"score": "96.00"
+}
+]
+},
+{
+"franchise": [
+{
+"id": "0011",
+"isHome": "0",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"players": {
+"player": [
+{
+"score": "6.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "13610"
+},
+{
+"updatedStats": "",
+"id": "17034",
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"updatedStats": "",
+"id": "16582",
+"score": "6.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"score": "3.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "15749"
+},
+{
+"score": "1.50",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16593"
+},
+{
+"id": "13674",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "11.00"
+},
+{
+"updatedStats": "",
+"id": "14136",
+"score": "23.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"score": "10.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16189"
+},
+{
+"updatedStats": "",
+"id": "11150",
+"score": "17.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "25.00",
+"id": "13116",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "14803",
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "13189",
+"score": "5.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "12801",
+"score": "8.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "17055"
+},
+{
+"updatedStats": "",
+"id": "12676",
+"score": "10.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "13793",
+"updatedStats": ""
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "4.00",
+"id": "16626",
+"updatedStats": ""
+},
+{
+"score": "12.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "14102"
+},
+{
+"score": "14.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "17102"
+},
+{
+"updatedStats": "",
+"id": "17059",
+"score": "0.50",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+}
+]
+},
+"playersCurrentlyPlaying": "0",
+"score": "113.00"
+},
+{
+"isHome": "1",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"id": "0007",
+"score": "154.00",
+"players": {
+"player": [
+{
+"score": "14.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16622"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "12.00",
+"id": "15794",
+"updatedStats": ""
+},
+{
+"score": "1.50",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "17066"
+},
+{
+"id": "16342",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "8.00"
+},
+{
+"id": "17104",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "3.00"
+},
+{
+"id": "15742",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "12.00"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "13.00",
+"id": "15757",
+"updatedStats": ""
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "13.00",
+"id": "17103",
+"updatedStats": ""
+},
+{
+"score": "27.50",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "12626"
+},
+{
+"updatedStats": "",
+"id": "15261",
+"score": "15.50",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"score": "6.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "17048"
+},
+{
+"updatedStats": "",
+"id": "13593",
+"score": "29.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "16620"
+},
+{
+"updatedStats": "",
+"id": "16627",
+"score": "13.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"updatedStats": "",
+"id": "16688",
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "15798",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00"
+},
+{
+"score": "1.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "16206"
+},
+{
+"updatedStats": "",
+"id": "16584",
+"score": "20.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "2.00",
+"id": "17072",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "14842",
+"score": "20.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+}
+]
+},
+"playersCurrentlyPlaying": "0"
+}
+]
+},
+{
+"franchise": [
+{
+"id": "0002",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"isHome": "0",
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "19.00",
+"id": "15256",
+"updatedStats": ""
+},
+{
+"score": "13.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "15751"
+},
+{
+"updatedStats": "",
+"id": "13404",
+"score": "6.50",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "3.00",
+"id": "17070",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "10.00",
+"id": "10703",
+"updatedStats": ""
+},
+{
+"score": "14.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "15708"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "4.00",
+"id": "14867",
+"updatedStats": ""
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "3.00",
+"id": "14860",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "11244",
+"score": "12.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "14974"
+},
+{
+"id": "17033",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00"
+},
+{
+"updatedStats": "",
+"id": "16594",
+"score": "6.50",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"score": "5.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "14071"
+},
+{
+"updatedStats": "",
+"id": "16175",
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "16187",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "3.00"
+},
+{
+"updatedStats": "",
+"id": "14059",
+"score": "28.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "12186",
+"score": "11.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "17069",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "3.00",
+"id": "14778",
+"updatedStats": ""
+},
+{
+"id": "15329",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "12.00"
+}
+]
+},
+"score": "98.50"
+},
+{
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "17039"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "12.00",
+"id": "13193",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "9.00",
+"id": "16080",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "15259",
+"score": "3.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "13635",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "7.00"
+},
+{
+"updatedStats": "",
+"id": "16171",
+"score": "6.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"id": "15754",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "12.00"
+},
+{
+"updatedStats": "",
+"id": "13146",
+"score": "11.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16610"
+},
+{
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "17053"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "17086",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "16148",
+"score": "8.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "9064",
+"score": "11.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "16162",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "9.00"
+},
+{
+"updatedStats": "",
+"id": "13633",
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"score": "18.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16614"
+},
+{
+"id": "15721",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "1.50"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "16.00",
+"id": "16191",
+"updatedStats": ""
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "17107",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "4.00",
+"id": "15281",
+"updatedStats": ""
+}
+]
+},
+"score": "108.00",
+"id": "0009",
+"isHome": "1",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0"
+}
+]
+},
+{
+"franchise": [
+{
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"score": "15.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "14861"
+},
+{
+"id": "15287",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "8.00"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "4.00",
+"id": "15889",
+"updatedStats": ""
+},
+{
+"id": "15756",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "6.00"
+},
+{
+"id": "15714",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "1.00"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "15789",
+"updatedStats": ""
+},
+{
+"id": "16214",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "13.00"
+},
+{
+"updatedStats": "",
+"id": "14797",
+"score": "7.50",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "6.00",
+"id": "17087",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "2.00",
+"id": "17030",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "17044",
+"score": "6.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"updatedStats": "",
+"id": "12611",
+"score": "11.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "16188",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "24.00"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "13163",
+"updatedStats": ""
+},
+{
+"id": "14127",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "17.00"
+},
+{
+"updatedStats": "",
+"id": "14800",
+"score": "13.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "11671",
+"score": "10.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"score": "8.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "16150"
+},
+{
+"score": "19.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "11222"
+},
+{
+"updatedStats": "",
+"id": "13604",
+"score": "16.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+}
+]
+},
+"score": "109.50",
+"id": "0004",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"isHome": "0"
+},
+{
+"id": "0010",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"isHome": "1",
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"id": "17046",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00"
+},
+{
+"updatedStats": "",
+"id": "15282",
+"score": "4.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"updatedStats": "",
+"id": "15761",
+"score": "12.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"score": "14.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "14836"
+},
+{
+"score": "0.50",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16603"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "2.00",
+"id": "15712",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "16619",
+"score": "8.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "15.00",
+"id": "14782",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "14104",
+"score": "1.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"score": "4.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16166"
+},
+{
+"updatedStats": "",
+"id": "16641",
+"score": "15.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "14783",
+"score": "24.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "15698",
+"score": "16.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "2.00",
+"id": "16601",
+"updatedStats": ""
+},
+{
+"id": "16585",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00"
+},
+{
+"id": "16161",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "21.00"
+},
+{
+"updatedStats": "",
+"id": "14802",
+"score": "10.50",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"updatedStats": "",
+"id": "14138",
+"score": "4.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"updatedStats": "",
+"id": "14823",
+"score": "2.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "14080",
+"updatedStats": ""
+}
+]
+},
+"score": "120.50"
+}
+]
+},
+{
+"franchise": [
+{
+"id": "0008",
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0",
+"isHome": "0",
+"players": {
+"player": [
+{
+"id": "16190",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "27.00"
+},
+{
+"updatedStats": "",
+"id": "13319",
+"score": "13.50",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "11.00",
+"id": "17071",
+"updatedStats": ""
+},
+{
+"score": "18.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "14832"
+},
+{
+"id": "11247",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "11.00"
+},
+{
+"updatedStats": "",
+"id": "16580",
+"score": "15.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"updatedStats": "",
+"id": "13164",
+"score": "3.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "16604",
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "15290",
+"score": "5.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "1.00",
+"id": "16723",
+"updatedStats": ""
+},
+{
+"score": "16.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "16193"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "21.00",
+"id": "13590",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "15237",
+"score": "10.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "16167",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "14.50"
+},
+{
+"score": "9.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16222"
+},
+{
+"updatedStats": "",
+"id": "15802",
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"score": "17.50",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "15715"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "25.00",
+"id": "7836",
+"updatedStats": ""
+},
+{
+"id": "13138",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "3.00"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "8.00",
+"id": "15779",
+"updatedStats": ""
+}
+]
+},
+"playersCurrentlyPlaying": "0",
+"score": "122.50"
+},
+{
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"id": "15293",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "3.00"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "6.50",
+"id": "14085",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "16615",
+"score": "12.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"updatedStats": "",
+"id": "17081",
+"score": "22.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "14777",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "8.00"
+},
+{
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "17269"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "17064",
+"updatedStats": ""
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "12263",
+"updatedStats": ""
+},
+{
+"id": "15713",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.50"
+},
+{
+"id": "14137",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "12.00"
+},
+{
+"score": "6.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "15762"
+},
+{
+"updatedStats": "",
+"id": "17051",
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "6.00",
+"id": "13192",
+"updatedStats": ""
+},
+{
+"score": "7.50",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "17068"
+},
+{
+"id": "17073",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "3.00"
+},
+{
+"id": "17108",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "1.00"
+},
+{
+"updatedStats": "",
+"id": "13589",
+"score": "38.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "14109",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "4.00"
+},
+{
+"score": "11.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "15319"
+},
+{
+"score": "12.50",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "15710"
+}
+]
+},
+"score": "118.00",
+"id": "0006",
+"isHome": "1",
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0"
+}
+]
+},
+{
+"franchise": [
+{
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "9.00",
+"id": "17043",
+"updatedStats": ""
+},
+{
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "10313"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "10.00",
+"id": "17042",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "11.00",
+"id": "14833",
+"updatedStats": ""
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "10.00",
+"id": "16586",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00",
+"id": "17234",
+"updatedStats": ""
+},
+{
+"id": "16616",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "15.00"
+},
+{
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16186"
+},
+{
+"score": "5.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "15331"
+},
+{
+"id": "13592",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "5.00"
+},
+{
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "16152"
+},
+{
+"id": "11938",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "1.00"
+},
+{
+"updatedStats": "",
+"id": "13772",
+"score": "5.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "4.00",
+"id": "16643",
+"updatedStats": ""
+},
+{
+"id": "15768",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "4.00"
+},
+{
+"score": "19.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16185"
+},
+{
+"score": "11.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "16181"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "3.00",
+"id": "15786",
+"updatedStats": ""
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "4.00",
+"id": "16747",
+"updatedStats": ""
+},
+{
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "17057"
+}
+]
+},
+"score": "96.00",
+"id": "0001",
+"isHome": "0",
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0"
+},
+{
+"score": "117.38",
+"players": {},
+"playersCurrentlyPlaying": "0",
+"isHome": "1",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"id": "AVG"
+}
+]
+},
+{
+"franchise": [
+{
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "19.00",
+"id": "15256",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "13.00",
+"id": "15751",
+"updatedStats": ""
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "6.50",
+"id": "13404",
+"updatedStats": ""
+},
+{
+"id": "17070",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "3.00"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "10.00",
+"id": "10703",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "15708",
+"score": "14.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "14867",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "4.00"
+},
+{
+"updatedStats": "",
+"id": "14860",
+"score": "3.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "11244",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "12.00"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "14974",
+"updatedStats": ""
+},
+{
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "17033"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "6.50",
+"id": "16594",
+"updatedStats": ""
+},
+{
+"id": "14071",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "5.00"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "16175",
+"updatedStats": ""
+},
+{
+"score": "3.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16187"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "28.00",
+"id": "14059",
+"updatedStats": ""
+},
+{
+"score": "11.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "12186"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "17069",
+"updatedStats": ""
+},
+{
+"score": "3.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "14778"
+},
+{
+"score": "12.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "15329"
+}
+]
+},
+"score": "98.50",
+"id": "0002",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"isHome": "0"
+},
+{
+"id": "AVG",
+"isHome": "1",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"players": {},
+"playersCurrentlyPlaying": "0",
+"score": "117.38"
+}
+]
+},
+{
+"franchise": [
+{
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"isHome": "0",
+"id": "0004",
+"score": "109.50",
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"score": "15.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "14861"
+},
+{
+"updatedStats": "",
+"id": "15287",
+"score": "8.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "15889",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "4.00"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "6.00",
+"id": "15756",
+"updatedStats": ""
+},
+{
+"score": "1.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "15714"
+},
+{
+"updatedStats": "",
+"id": "15789",
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "13.00",
+"id": "16214",
+"updatedStats": ""
+},
+{
+"id": "14797",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "7.50"
+},
+{
+"id": "17087",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "6.00"
+},
+{
+"id": "17030",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "2.00"
+},
+{
+"updatedStats": "",
+"id": "17044",
+"score": "6.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "12611",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "11.00"
+},
+{
+"updatedStats": "",
+"id": "16188",
+"score": "24.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "13163",
+"updatedStats": ""
+},
+{
+"score": "17.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "14127"
+},
+{
+"score": "13.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "14800"
+},
+{
+"updatedStats": "",
+"id": "11671",
+"score": "10.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "16150",
+"score": "8.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "19.00",
+"id": "11222",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "13604",
+"score": "16.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+}
+]
+}
+},
+{
+"playersCurrentlyPlaying": "0",
+"players": {},
+"score": "117.38",
+"id": "AVG",
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0",
+"isHome": "1"
+}
+]
+},
+{
+"franchise": [
+{
+"score": "127.50",
+"players": {
+"player": [
+{
+"id": "14073",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "12.50"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "6.00",
+"id": "13629",
+"updatedStats": ""
+},
+{
+"id": "10700",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00"
+},
+{
+"score": "7.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "12620"
+},
+{
+"updatedStats": "",
+"id": "16169",
+"score": "10.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "3.50",
+"id": "15716",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "17031",
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"score": "17.50",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "13130"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "6.00",
+"id": "14835",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "16184",
+"score": "14.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"score": "12.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "13299"
+},
+{
+"updatedStats": "",
+"id": "13131",
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "1.00",
+"id": "16649",
+"updatedStats": ""
+},
+{
+"score": "3.50",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "15711"
+},
+{
+"id": "9431",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "13.00"
+},
+{
+"id": "11675",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "9.00"
+},
+{
+"score": "17.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "14056"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "18.00",
+"id": "13630",
+"updatedStats": ""
+},
+{
+"id": "13132",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "12.00"
+},
+{
+"score": "22.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "15753"
+}
+]
+},
+"playersCurrentlyPlaying": "0",
+"isHome": "0",
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0",
+"id": "0005"
+},
+{
+"isHome": "1",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"id": "AVG",
+"score": "117.38",
+"players": {},
+"playersCurrentlyPlaying": "0"
+}
+]
+},
+{
+"franchise": [
+{
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"isHome": "0",
+"id": "0006",
+"score": "118.00",
+"players": {
+"player": [
+{
+"updatedStats": "",
+"id": "15293",
+"score": "3.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"score": "6.50",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "14085"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "12.00",
+"id": "16615",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "17081",
+"score": "22.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "14777",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "8.00"
+},
+{
+"id": "17269",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00"
+},
+{
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "17064"
+},
+{
+"id": "12263",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.50",
+"id": "15713",
+"updatedStats": ""
+},
+{
+"score": "12.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "14137"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "6.00",
+"id": "15762",
+"updatedStats": ""
+},
+{
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "17051"
+},
+{
+"score": "6.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "13192"
+},
+{
+"updatedStats": "",
+"id": "17068",
+"score": "7.50",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "17073",
+"score": "3.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "1.00",
+"id": "17108",
+"updatedStats": ""
+},
+{
+"id": "13589",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "38.00"
+},
+{
+"updatedStats": "",
+"id": "14109",
+"score": "4.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "15319",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "11.00"
+},
+{
+"updatedStats": "",
+"id": "15710",
+"score": "12.50",
+"gameSecondsRemaining": "0",
+"status": "starter"
+}
+]
+},
+"playersCurrentlyPlaying": "0"
+},
+{
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0",
+"isHome": "1",
+"id": "AVG",
+"score": "117.38",
+"playersCurrentlyPlaying": "0",
+"players": {}
+}
+]
+},
+{
+"franchise": [
+{
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"isHome": "0",
+"id": "0007",
+"score": "154.00",
+"players": {
+"player": [
+{
+"updatedStats": "",
+"id": "16622",
+"score": "14.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "15794",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "12.00"
+},
+{
+"updatedStats": "",
+"id": "17066",
+"score": "1.50",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"score": "8.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "16342"
+},
+{
+"score": "3.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "17104"
+},
+{
+"score": "12.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "15742"
+},
+{
+"score": "13.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "15757"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "13.00",
+"id": "17103",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "12626",
+"score": "27.50",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"score": "15.50",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "15261"
+},
+{
+"updatedStats": "",
+"id": "17048",
+"score": "6.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"score": "29.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "13593"
+},
+{
+"id": "16620",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "0.00"
+},
+{
+"updatedStats": "",
+"id": "16627",
+"score": "13.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "16688",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00"
+},
+{
+"id": "15798",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00"
+},
+{
+"score": "1.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16206"
+},
+{
+"id": "16584",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "20.00"
+},
+{
+"score": "2.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "17072"
+},
+{
+"score": "20.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "14842"
+}
+]
+},
+"playersCurrentlyPlaying": "0"
+},
+{
+"isHome": "1",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"id": "AVG",
+"score": "117.38",
+"playersCurrentlyPlaying": "0",
+"players": {}
+}
+]
+},
+{
+"franchise": [
+{
+"score": "122.50",
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"score": "27.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16190"
+},
+{
+"id": "13319",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "13.50"
+},
+{
+"id": "17071",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "11.00"
+},
+{
+"score": "18.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "14832"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "11.00",
+"id": "11247",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "15.00",
+"id": "16580",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "13164",
+"score": "3.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "16604",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00"
+},
+{
+"updatedStats": "",
+"id": "15290",
+"score": "5.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "16723",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "1.00"
+},
+{
+"score": "16.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "16193"
+},
+{
+"updatedStats": "",
+"id": "13590",
+"score": "21.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "15237",
+"score": "10.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "16167",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "14.50"
+},
+{
+"id": "16222",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "9.00"
+},
+{
+"updatedStats": "",
+"id": "15802",
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"updatedStats": "",
+"id": "15715",
+"score": "17.50",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "7836",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "25.00"
+},
+{
+"score": "3.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "13138"
+},
+{
+"id": "15779",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "8.00"
+}
+]
+},
+"isHome": "0",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"id": "0008"
+},
+{
+"players": {},
+"playersCurrentlyPlaying": "0",
+"score": "117.38",
+"id": "AVG",
+"isHome": "1",
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0"
+}
+]
+},
+{
+"franchise": [
+{
+"isHome": "0",
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0",
+"id": "0009",
+"score": "108.00",
+"players": {
+"player": [
+{
+"updatedStats": "",
+"id": "17039",
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "13193",
+"score": "12.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"updatedStats": "",
+"id": "16080",
+"score": "9.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "15259",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "3.00"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "7.00",
+"id": "13635",
+"updatedStats": ""
+},
+{
+"score": "6.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16171"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "12.00",
+"id": "15754",
+"updatedStats": ""
+},
+{
+"id": "13146",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "11.00"
+},
+{
+"updatedStats": "",
+"id": "16610",
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "17053",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00"
+},
+{
+"updatedStats": "",
+"id": "17086",
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"updatedStats": "",
+"id": "16148",
+"score": "8.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "9064",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "11.00"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "9.00",
+"id": "16162",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "13633",
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"score": "18.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "16614"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "1.50",
+"id": "15721",
+"updatedStats": ""
+},
+{
+"score": "16.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "16191"
+},
+{
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "17107"
+},
+{
+"id": "15281",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "4.00"
+}
+]
+},
+"playersCurrentlyPlaying": "0"
+},
+{
+"id": "AVG",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"isHome": "1",
+"players": {},
+"playersCurrentlyPlaying": "0",
+"score": "117.38"
+}
+]
+},
+{
+"franchise": [
+{
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0",
+"isHome": "0",
+"id": "0010",
+"score": "120.50",
+"players": {
+"player": [
+{
+"updatedStats": "",
+"id": "17046",
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"updatedStats": "",
+"id": "15282",
+"score": "4.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"score": "12.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "15761"
+},
+{
+"id": "14836",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "14.00"
+},
+{
+"id": "16603",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.50"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "2.00",
+"id": "15712",
+"updatedStats": ""
+},
+{
+"id": "16619",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "8.00"
+},
+{
+"id": "14782",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "15.00"
+},
+{
+"updatedStats": "",
+"id": "14104",
+"score": "1.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "16166",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "4.00"
+},
+{
+"id": "16641",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "15.00"
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "24.00",
+"id": "14783",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "15698",
+"score": "16.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"id": "16601",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "2.00"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "16585",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "16161",
+"score": "21.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "14802",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "10.50"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "4.00",
+"id": "14138",
+"updatedStats": ""
+},
+{
+"id": "14823",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "2.00"
+},
+{
+"id": "14080",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00"
+}
+]
+},
+"playersCurrentlyPlaying": "0"
+},
+{
+"playersCurrentlyPlaying": "0",
+"players": {},
+"score": "117.38",
+"id": "AVG",
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0",
+"isHome": "1"
+}
+]
+},
+{
+"franchise": [
+{
+"score": "113.00",
+"playersCurrentlyPlaying": "0",
+"players": {
+"player": [
+{
+"updatedStats": "",
+"id": "13610",
+"score": "6.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"score": "0.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"updatedStats": "",
+"id": "17034"
+},
+{
+"score": "6.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "16582"
+},
+{
+"score": "3.00",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "15749"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "1.50",
+"id": "16593",
+"updatedStats": ""
+},
+{
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "11.00",
+"id": "13674",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "23.00",
+"id": "14136",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "10.00",
+"id": "16189",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "11150",
+"score": "17.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"id": "13116",
+"updatedStats": "",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"score": "25.00"
+},
+{
+"updatedStats": "",
+"id": "14803",
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"updatedStats": "",
+"id": "13189",
+"score": "5.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"score": "8.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "12801"
+},
+{
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "17055"
+},
+{
+"id": "12676",
+"updatedStats": "",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "10.00"
+},
+{
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "13793"
+},
+{
+"updatedStats": "",
+"id": "16626",
+"score": "4.00",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+},
+{
+"id": "14102",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "12.00"
+},
+{
+"score": "14.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "17102"
+},
+{
+"updatedStats": "",
+"id": "17059",
+"score": "0.50",
+"gameSecondsRemaining": "0",
+"status": "nonstarter"
+}
+]
+},
+"isHome": "0",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"id": "0011"
+},
+{
+"id": "AVG",
+"isHome": "1",
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0",
+"players": {},
+"playersCurrentlyPlaying": "0",
+"score": "117.38"
+}
+]
+},
+{
+"franchise": [
+{
+"id": "0012",
+"playersYetToPlay": "0",
+"gameSecondsRemaining": "0",
+"isHome": "0",
+"players": {
+"player": [
+{
+"id": "16617",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "25.00"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "0.00",
+"id": "16194",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "15799",
+"score": "7.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "2.00",
+"id": "17080",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "16644",
+"score": "0.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+},
+{
+"score": "8.00",
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "13641"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "0.00",
+"id": "14122",
+"updatedStats": ""
+},
+{
+"gameSecondsRemaining": "0",
+"status": "nonstarter",
+"score": "19.00",
+"id": "14105",
+"updatedStats": ""
+},
+{
+"score": "6.50",
+"status": "starter",
+"gameSecondsRemaining": "0",
+"updatedStats": "",
+"id": "15972"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "11.00",
+"id": "16598",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "16213",
+"score": "14.00",
+"status": "starter",
+"gameSecondsRemaining": "0"
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "2.00",
+"id": "17056",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "16581",
+"score": "19.00",
+"gameSecondsRemaining": "0",
+"status": "starter"
+},
+{
+"id": "17074",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "9.00"
+},
+{
+"score": "4.00",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"updatedStats": "",
+"id": "16639"
+},
+{
+"id": "16211",
+"updatedStats": "",
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "23.00"
+},
+{
+"gameSecondsRemaining": "0",
+"status": "starter",
+"score": "23.00",
+"id": "16583",
+"updatedStats": ""
+},
+{
+"status": "nonstarter",
+"gameSecondsRemaining": "0",
+"score": "12.00",
+"id": "17047",
+"updatedStats": ""
+},
+{
+"updatedStats": "",
+"id": "15254",
+"score": "0.50",
+"status": "nonstarter",
+"gameSecondsRemaining": "0"
+}
+]
+},
+"playersCurrentlyPlaying": "0",
+"score": "141.50"
+},
+{
+"id": "AVG",
+"gameSecondsRemaining": "0",
+"playersYetToPlay": "0",
+"isHome": "1",
+"playersCurrentlyPlaying": "0",
+"players": {},
+"score": "117.38"
+}
+]
+}
+],
+"week": "1"
+},
+"encoding": "utf-8",
+"version": "1.0"
+}
